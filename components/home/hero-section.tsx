@@ -30,12 +30,12 @@ export function HeroSection() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-96 w-96 rounded-full bg-accent/5 blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
       </div>
 
-      <div className="container relative mx-auto px-4 py-20 lg:px-8 lg:py-32">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+      <div className="container relative mx-auto px-4 py-10 sm:py-14 lg:px-8 lg:py-32">
+        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
           {/* Content */}
           <div className="text-center lg:text-left">
             {/* Trust Badge with Rating - Structured Data */}
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2.5 text-sm font-medium text-white backdrop-blur-sm border border-white/10 hover:bg-white/15 transition-all shadow-lg">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs sm:text-sm font-medium text-white backdrop-blur-sm border border-white/10 hover:bg-white/15 transition-all shadow-lg">
               <Shield className="h-4 w-4 text-accent" aria-hidden="true" />
               <span className="hidden sm:inline">Gauteng's Trusted Service Provider</span>
               <span className="sm:hidden">Trusted in Gauteng</span>
@@ -50,23 +50,21 @@ export function HeroSection() {
             </div>
 
             {/* Main Headline - SEO Optimized H1 */}
-            <h1 className="mb-6 text-balance text-4xl font-bold tracking-tight text-primary-foreground md:text-5xl lg:text-6xl xl:text-7xl" itemProp="name">
+            <h1 className="mb-4 text-balance text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl" itemProp="name">
               <span className="block">We Build Gauteng.</span>
               <span className="block text-accent">From Foundation to Finish.</span>
-              <span className="block text-3xl md:text-4xl lg:text-5xl mt-2 text-primary-foreground/90">
-                Construction, Civil Works &amp; Maintenance
+              <span className="mt-1 hidden text-xl text-primary-foreground/90 sm:block sm:text-2xl md:text-4xl">
+                Roofing, Plumbing, Renovations &amp; More
               </span>
             </h1>
 
-            {/* SEO-Rich Description */}
-            <p className="mb-8 text-pretty text-lg text-primary-foreground/80 md:text-xl max-w-2xl mx-auto lg:mx-0" itemProp="description">
-              <strong className="text-white">ZECO Construction</strong> is your single trusted partner for building, renovations, maintenance, civil works, and automated security systems across{" "}
-              <strong className="text-white">Pretoria, Johannesburg, Midrand</strong> and greater{" "}
-              <strong className="text-white">Gauteng</strong>. Licensed, insured, and driven to deliver.
+            {/* Homeowner-Friendly Description */}
+            <p className="mb-5 text-pretty text-base text-primary-foreground/80 sm:text-lg md:text-xl max-w-2xl mx-auto lg:mx-0" itemProp="description">
+              Need a leaking roof fixed, a new geyser installed, or your kitchen renovated? <strong className="text-white">ZECO Construction</strong> is Gauteng's trusted team for home repairs, renovations, plumbing, electrical and painting — serving <strong className="text-white">Pretoria, Johannesburg, Midrand</strong> and beyond.
             </p>
 
-            {/* Trust Indicators with Icons */}
-            <div className="mb-10 flex flex-wrap justify-center gap-4 lg:justify-start">
+            {/* Trust Indicators with Icons - hidden on mobile to keep CTAs above the fold */}
+            <div className="mb-6 hidden sm:flex flex-wrap justify-center gap-4 lg:justify-start">
               <div className="flex items-center gap-2.5 text-sm text-primary-foreground/90 bg-white/5 rounded-lg px-4 py-2 backdrop-blur-sm">
                 <div className="flex h-8 w-8 items-center justify-center rounded-full bg-accent/20">
                   <CheckCircle className="h-4 w-4 text-accent" aria-hidden="true" />
@@ -87,12 +85,12 @@ export function HeroSection() {
               </div>
             </div>
 
-            {/* CTA Buttons - Optimized for Conversion */}
-            <div className="flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
+            {/* CTA Buttons - Optimized for Conversion, visible without scrolling */}
+            <div className="flex flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start">
               <Button
                 asChild
                 size="lg"
-                className="group bg-accent text-accent-foreground hover:bg-accent/90 shadow-xl shadow-accent/25 h-14 px-8 text-base font-semibold transition-all hover:scale-105"
+                className="group bg-accent text-accent-foreground hover:bg-accent/90 shadow-xl shadow-accent/25 h-12 sm:h-14 px-8 text-base font-semibold transition-all hover:scale-105"
               >
                 <Link href="/contact" itemProp="url">
                   <Phone className="mr-2 h-5 w-5 group-hover:animate-pulse" aria-hidden="true" />
@@ -102,7 +100,7 @@ export function HeroSection() {
               <Button
                 asChild
                 size="lg"
-                className="group h-14 px-8 text-base font-semibold bg-[#25D366] text-white hover:bg-[#25D366]/90 shadow-xl shadow-[#25D366]/25 transition-all hover:scale-105"
+                className="group h-12 sm:h-14 px-8 text-base font-semibold bg-[#25D366] text-white hover:bg-[#25D366]/90 shadow-xl shadow-[#25D366]/25 transition-all hover:scale-105"
               >
                 <a href="https://wa.me/27748509727" target="_blank" rel="noopener noreferrer">
                   <WhatsAppIcon className="mr-2 h-5 w-5" aria-hidden="true" />
@@ -113,17 +111,17 @@ export function HeroSection() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-white/30 bg-white/5 text-white hover:bg-white/10 backdrop-blur-sm h-14 px-8 text-base font-semibold transition-all hover:scale-105"
+                className="border-white/30 bg-white/5 text-white hover:bg-white/10 backdrop-blur-sm h-12 sm:h-14 px-8 text-base font-semibold transition-all hover:scale-105"
               >
                 <Link href="/services">
-                  Explore 15+ Services
+                  Explore Our Services
                   <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
                 </Link>
               </Button>
             </div>
 
-            {/* Quick Stats */}
-            <div className="mt-8 flex flex-wrap justify-center lg:justify-start gap-6 text-sm text-primary-foreground/70">
+            {/* Quick Stats - hidden on mobile to keep CTAs above the fold */}
+            <div className="mt-6 hidden sm:flex flex-wrap justify-center lg:justify-start gap-6 text-sm text-primary-foreground/70">
               <div className="flex items-center gap-2">
                 <Zap className="h-4 w-4 text-accent" aria-hidden="true" />
                 <span>Same-day quotes available</span>
@@ -173,7 +171,7 @@ export function HeroSection() {
                     <Award className="h-7 w-7 text-accent-foreground" aria-hidden="true" />
                   </div>
                   <div>
-                    <p className="text-3xl font-bold text-card-foreground">15+</p>
+                    <p className="text-3xl font-bold text-card-foreground">10+</p>
                     <p className="text-sm text-muted-foreground">Service Categories</p>
                   </div>
                 </div>
@@ -189,7 +187,7 @@ export function HeroSection() {
         </div>
 
         {/* Certifications & Trust Badges - SEO Rich */}
-        <div className="mt-16 border-t border-white/10 pt-10">
+        <div className="mt-10 sm:mt-16 border-t border-white/10 pt-8 sm:pt-10">
           <p className="text-center text-sm text-primary-foreground/60 mb-6 font-medium">
             Trusted by 500+ residential, commercial & industrial clients across Gauteng
           </p>
@@ -217,7 +215,7 @@ export function HeroSection() {
       {/* Hidden Structured Data for SEO */}
       <meta itemProp="provider" content="ZECO Construction" />
       <meta itemProp="areaServed" content="Gauteng, Pretoria, Johannesburg, Midrand, Sandton, Centurion, Randburg" />
-      <meta itemProp="serviceType" content="Construction, Renovation, Maintenance, Civil Works, Security Systems" />
+      <meta itemProp="serviceType" content="Construction, Renovation, Roofing, Plumbing, Electrical, Painting" />
     </section>
   )
 }
