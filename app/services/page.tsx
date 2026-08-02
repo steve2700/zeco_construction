@@ -234,7 +234,7 @@ export default function ServicesPage() {
         </div>
 
         <div className="container mx-auto px-4 lg:px-8 relative">
-          <Breadcrumbs variant="onDark" items={[{ label: "About Us" }]} />
+          <Breadcrumbs variant="onDark" items={[{ label: "Services" }]} />
           <div className="mx-auto max-w-4xl text-center">
             {/* Trust Badge */}
             <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2.5 text-sm font-medium text-white backdrop-blur-sm border border-white/10">
