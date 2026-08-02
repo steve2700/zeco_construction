@@ -56,7 +56,7 @@ export function ServiceAreaTemplate({
         </div>
 
         <div className="container relative mx-auto px-4 lg:px-8">
-          <Breadcrumbs items={[{ label: "Service Areas", href: "/service-areas" }, { label: areaName }]} />
+          <Breadcrumbs variant="onDark" items={[{ label: "Service Areas", href: "/service-areas" }, { label: areaName }]} />
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
               <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2.5 text-sm font-medium text-white backdrop-blur-sm border border-white/10">
