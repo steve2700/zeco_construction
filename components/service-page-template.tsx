@@ -54,6 +54,7 @@ export function ServicePageTemplate({
 
         <div className="container mx-auto px-4 lg:px-8 relative">
           <Breadcrumbs 
+            variant="onDark"
             items={[
               { label: "Services", href: "/services" }, 
               { label: title }
