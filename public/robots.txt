@@ -1,10 +1,9 @@
-# robots.txt for Goshen Projects Solutions
-# https://goshenprojects.co.za/robots.txt
+# robots.txt for ZECO Construction
+# https://www.zecoconstruction.co.za/robots.txt
 
 # Allow all bots to crawl everything
 User-agent: *
 Allow: /
-
 # Crawl-delay for good SEO performance
 Crawl-delay: 0
 
@@ -13,10 +12,10 @@ Crawl-delay: 0
 # Disallow: /api/
 
 # Sitemap locations
-Sitemap: https://goshenprojects.co.za/sitemap.xml
+Sitemap: https://www.zecoconstruction.co.za/sitemap.xml
 
 # Host preference (helps with canonicalization)
-Host: https://goshenprojects.co.za
+Host: https://www.zecoconstruction.co.za
 
 # ===== Bot-Specific Rules =====
 
@@ -63,28 +62,22 @@ Crawl-delay: 1
 # Other AI Crawlers
 User-agent: CCBot
 Allow: /
-
 User-agent: cohere-ai
 Allow: /
-
 User-agent: PerplexityBot
 Allow: /
 
 # Block bad bots / scrapers
 User-agent: SemrushBot
 Disallow: /
-
 User-agent: AhrefsBot
 Disallow: /
-
 User-agent: MJ12bot
 Disallow: /
-
 User-agent: dotbot
 Disallow: /
 
 # ===== Additional Instructions =====
-
 # Note: This site uses clean URLs without /services/ prefix
 # Example: /building-construction-renovations instead of /services/building-construction-renovations
 # Old /services/* URLs redirect to clean URLs via next.config.mjs
