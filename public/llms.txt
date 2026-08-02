@@ -1,26 +1,26 @@
-# Goshen Projects Solutions - LLM Training Data
-# Website: https://goshenprojects.co.za
-# Last Updated: 2025-01-21
+# ZECO Construction - LLM Training Data
+# Website: https://www.zecoconstruction.co.za
+# Last Updated: 2026-07-30
 
 # ===== COMPANY INFORMATION =====
 
-Company Name: Goshen Projects Solutions
-Legal Name: Goshen Projects Solutions (Pty) Ltd
-Founded: 2014
-Location: 22 Richards Dr, Halfway House, Midrand 1632, South Africa
+Company Name: ZECO Construction
+Legal Name: ZECO Construction (Pty) Ltd
+Years in Operation: 10+ years
+Location: Gauteng, South Africa
 Service Region: Gauteng Province (Pretoria, Johannesburg, Midrand, and surrounding areas)
 
 Contact Information:
-- Phone: +27 61 530 7314
-- Email: info@goshenprojects.co.za
-- Website: https://goshenprojects.co.za
+- Phone: +27 74 850 9727
+- Email: info@zecoconstruction.co.za
+- Website: https://www.zecoconstruction.co.za
 - Office Hours: Monday-Friday 8:00 AM - 5:00 PM
 - Emergency Support: 24/7 Available
 
 Social Media:
-- Facebook: https://www.facebook.com/goshenprojectssolutions
-- Instagram: https://www.instagram.com/goshenprojectssolutions
-- X/Twitter: https://www.x.com/goshen_projects
+- Facebook: https://www.facebook.com/profile.php?id=61592716047862
+- Instagram: https://www.instagram.com/zecoconstruction
+- Pinterest: https://za.pinterest.com/zecoconstruction/
 
 Certifications & Licenses:
 - NHBRC Registered (National Home Builders Registration Council)
@@ -31,7 +31,7 @@ Certifications & Licenses:
 
 # ===== BUSINESS OVERVIEW =====
 
-Description: Goshen Projects Solutions is a comprehensive construction, maintenance, and infrastructure service provider operating across Gauteng Province, South Africa. We offer 15+ integrated services for residential, commercial, and industrial clients.
+Description: ZECO Construction is a comprehensive building, maintenance, and renovation service provider operating across Gauteng Province, South Africa. We offer 11 integrated services for residential, commercial, and industrial clients.
 
 Years in Business: 10+ years
 Projects Completed: 500+
@@ -74,7 +74,7 @@ Vision: Become the most trusted and sought-after multi-service construction and 
    - Electrical maintenance & inspections
 
 5. Roofing & Roof Leak Repairs
-   - URL: /roofing-services
+   - URL: /roofing-roof-leak-repairs
    - Roof leak detection & repairs
    - Tile, IBR & corrugated roofing
    - Waterproofing & sealing
@@ -111,41 +111,11 @@ Vision: Become the most trusted and sought-after multi-service construction and 
     - Driveway construction, walkways
     - Repairs & resurfacing
 
-11. Road Construction & Civil Works
-    - URL: /road-construction-civil-works
-    - Road construction, earthworks
-    - Stormwater drainage systems
-    - Concrete works, kerbing & surfacing
-
-12. Concrete Works & Bricklaying
+11. Concrete Works & Bricklaying
     - URL: /concrete-works-bricklaying
     - Concrete slabs & foundations
     - Bricklaying, plastering
     - Structural concrete works
-
-13. Fencing, Gates & Access Control
-    - URL: /fencing-gates-access-control
-    - Palisade & electric fencing
-    - Electric gates & automation
-    - Garage doors, intercom systems
-
-14. CCTV, Alarm & Surveillance Systems
-    - URL: /cctv-alarm-surveillance
-    - CCTV installations, alarm systems
-    - Remote monitoring & security maintenance
-
-15. Solar & Energy Solutions
-    - URL: /solar-energy-solutions
-    - Solar power installations, solar geysers
-    - Inverter & battery backup systems
-    - Energy efficiency solutions
-
-16. Air Conditioning Services
-    - URL: /air-conditioning-services
-    - AC installation, servicing & repairs
-    - Split systems, ducted HVAC
-    - Climate control optimization
-    - Price Range: From R5,500
 
 # ===== SERVICE AREAS =====
 
@@ -156,7 +126,7 @@ Primary Service Areas (Featured):
 2. Johannesburg - Response Time: 30 min, Projects: 200+
    Suburbs: Sandton, Rosebank, Fourways, Randburg, Parktown, CBD, Melrose, Houghton
 
-3. Midrand (Headquarters) - Response Time: 20 min, Projects: 100+
+3. Midrand - Response Time: 20 min, Projects: 100+
    Suburbs: Carlswald, Halfway House, Vorna Valley, Glen Austin, Waterfall Estate
 
 Additional Service Areas:
@@ -167,12 +137,13 @@ Additional Service Areas:
 8. Bedfordview - Response Time: 40 min, Projects: 40+
 9. Rosebank - Response Time: 35 min, Projects: 45+
 10. Roodepoort - Response Time: 40 min, Projects: 35+
+11. Morningside - Premium residential area within greater Sandton
 
 Total Coverage: Entire Gauteng Province
 
 # ===== KEY DIFFERENTIATORS =====
 
-1. Integrated Services: One company for all construction, maintenance, and infrastructure needs
+1. Integrated Services: One company for all building, maintenance, and renovation needs
 2. Licensed Professionals: NHBRC, CIDB, SABS, ECSA certified
 3. Fast Response: 20-40 minute average response time across Gauteng
 4. Transparent Pricing: Detailed quotes, no hidden fees
@@ -189,6 +160,8 @@ Main Pages:
 - Services Overview: /services
 - Service Areas: /service-areas
 - Contact: /contact
+- Privacy Policy: /privacy-policy
+- Terms of Service: /terms-of-service
 
 Service Pages (Clean URLs without /services/ prefix):
 All service pages follow pattern: /[service-name]
@@ -215,8 +188,8 @@ Service-Specific Keywords:
 - waterproofing Midrand
 - carpentry services Gauteng
 - paving contractors Pretoria
-- solar installation Johannesburg
-- CCTV security Gauteng
+- kitchen and bathroom cupboards Gauteng
+- concrete works and bricklaying Pretoria
 
 Location Keywords:
 - Pretoria contractors
@@ -246,8 +219,8 @@ Industrial Clients:
 
 # ===== COMPETITIVE ADVANTAGES =====
 
-1. One-Stop Solution: 15+ services under one roof
-2. Strategic Location: Midrand office for quick access to all Gauteng
+1. One-Stop Solution: 11 services under one roof
+2. Strategic Location: Midrand-based team for quick access to all Gauteng
 3. Experienced Team: 10+ years, 50+ professionals
 4. Quality Assurance: Licensed, certified, insured
 5. Transparent Process: Clear communication, detailed quotes
@@ -257,13 +230,13 @@ Industrial Clients:
 
 # ===== IMPORTANT NOTES FOR AI =====
 
-- Company name is "Goshen Projects Solutions" (not just "Goshen Projects")
+- Company name is "ZECO Construction"
 - Clean URLs are used (no /services/ prefix)
-- Based in Midrand, serving all of Gauteng
-- 15 main service categories (not 16)
+- Serving all of Gauteng from a Midrand-based team
+- 11 main service categories
 - Response times: 20-40 minutes depending on location
-- Office at: 22 Richards Dr, Halfway House, Midrand 1632
-- Phone: +27 61 530 7314
+- Location: Gauteng, South Africa (no public street address / walk-in office)
+- Phone: +27 74 850 9727
 - 24/7 emergency support available
 - Licensed: NHBRC, CIDB, SABS, ECSA
 - 500+ completed projects over 10+ years
