@@ -25,6 +25,9 @@ import {
   Car,
   Facebook,
   Instagram,
+  AlertTriangle,
+  Flame,
+  Waves,
 } from "lucide-react"
 import { WhatsAppIcon } from "@/components/icons/whatsapp-icon"
 import { PinterestIcon } from "@/components/icons/pinterest-icon"
@@ -91,6 +94,24 @@ const services = [
     description: "Brick paving, tar paving & driveway construction",
     icon: Car,
   },
+  {
+    title: "Emergency Plumber & Burst Pipes",
+    href: "/emergency-plumber-burst-pipes",
+    description: "24/7 emergency response for burst pipes & leaks",
+    icon: AlertTriangle,
+  },
+  {
+    title: "Geyser Installation & Repairs",
+    href: "/geyser-installation-repairs",
+    description: "Electric, solar & Kwikot geyser installs & repairs",
+    icon: Flame,
+  },
+  {
+    title: "Blocked Drains Unblocking",
+    href: "/blocked-drains-unblocking",
+    description: "Fast drain cleaning with jetting & CCTV inspection",
+    icon: Waves,
+  },
 ]
 
 export function Header() {
@@ -104,7 +125,7 @@ export function Header() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10)
     }
-    
+
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setServicesOpen(false)
@@ -113,7 +134,7 @@ export function Header() {
 
     window.addEventListener("scroll", handleScroll)
     document.addEventListener("mousedown", handleClickOutside)
-    
+
     return () => {
       window.removeEventListener("scroll", handleScroll)
       document.removeEventListener("mousedown", handleClickOutside)
@@ -202,10 +223,10 @@ export function Header() {
       <div className="container mx-auto flex h-16 lg:h-20 items-center justify-between px-4 lg:px-8">
         <Link href="/" className="flex items-center gap-3">
           <div className="relative flex h-11 w-11 items-center justify-center rounded-xl overflow-hidden shadow-lg bg-white">
-            <Image 
-              src="/logo-icon.png" 
-              alt="ZECO Construction Logo" 
-              width={44} 
+            <Image
+              src="/logo-icon.png"
+              alt="ZECO Construction Logo"
+              width={44}
               height={44}
               className="object-cover"
               priority
@@ -255,10 +276,10 @@ export function Header() {
             </button>
 
             {servicesOpen && (
-              <div 
+              <div
                 className="absolute left-0 top-full mt-2 w-[800px] rounded-lg border border-gray-200 bg-white shadow-xl z-50 animate-in fade-in slide-in-from-top-2 duration-200"
               >
-                <div className="grid grid-cols-2 gap-1 p-4">
+                <div className="grid grid-cols-2 gap-1 p-4 max-h-[70vh] overflow-y-auto">
                   {services.map((service) => (
                     <Link
                       key={service.href}
@@ -287,7 +308,7 @@ export function Header() {
                       onClick={() => setServicesOpen(false)}
                       className="flex items-center justify-center gap-2 rounded-md bg-primary/5 p-3 text-sm font-semibold text-primary hover:bg-primary hover:text-white transition-all"
                     >
-                      View All 10 Services <ChevronRight className="h-4 w-4" />
+                      View All 13 Services <ChevronRight className="h-4 w-4" />
                     </Link>
                   </div>
                 </div>
@@ -339,10 +360,10 @@ export function Header() {
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-3">
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg overflow-hidden bg-white">
-                      <Image 
-                        src="/logo-icon.png" 
-                        alt="ZECO Construction" 
-                        width={40} 
+                      <Image
+                        src="/logo-icon.png"
+                        alt="ZECO Construction"
+                        width={40}
                         height={40}
                         className="object-cover"
                         priority
@@ -381,7 +402,7 @@ export function Header() {
                     <Mail className="h-4 w-4" />
                     info@zecoconstruction.co.za
                   </a>
-                  <a 
+                  <a
                     href="https://www.google.com/maps?q=ZECO+Construction+Gauteng+South+Africa"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -391,7 +412,7 @@ export function Header() {
                     Gauteng, South Africa
                   </a>
                 </div>
-                
+
                 {/* Social Links in Mobile */}
                 <div className="flex items-center gap-4 mt-4 pt-4 border-t border-white/20">
                   <a
@@ -494,7 +515,7 @@ export function Header() {
                         className="mx-4 mb-4 flex items-center justify-center gap-2 rounded-xl border-2 border-dashed border-secondary/30 p-3 text-sm font-medium text-secondary hover:bg-secondary/5 transition-colors"
                         onClick={() => setIsOpen(false)}
                       >
-                        View All 10 Services
+                        View All 13 Services
                         <ChevronRight className="h-4 w-4" />
                       </Link>
                     </div>
