@@ -14,6 +14,9 @@ import {
   Construction,
   ArrowRight,
   Car,
+  AlertTriangle,
+  Flame,
+  Waves,
 } from "lucide-react"
 
 const services = [
@@ -102,13 +105,34 @@ const services = [
     image: "/brick-paving-driveway-installation-residential-sou.jpg",
     keywords: "paving, driveways, tar surfacing",
   },
+  {
+    icon: AlertTriangle,
+    title: "Emergency Plumber & Burst Pipes",
+    description: "24/7 emergency plumbing response for burst pipes, major leaks, and flood control across Gauteng.",
+    href: "/emergency-plumber-burst-pipes",
+    keywords: "emergency plumber, burst pipe repairs",
+  },
+  {
+    icon: Flame,
+    title: "Geyser Installation & Repairs",
+    description: "Electric, solar & Kwikot geyser installation, replacement, and repairs with full compliance certification.",
+    href: "/geyser-installation-repairs",
+    keywords: "geyser installation, Kwikot geyser, solar geyser",
+  },
+  {
+    icon: Waves,
+    title: "Blocked Drains Unblocking",
+    description: "Fast blocked drain clearing with high-pressure jetting and CCTV inspection across Gauteng.",
+    href: "/blocked-drains-unblocking",
+    keywords: "blocked drains, drain unblocking, drain cleaning",
+  },
 ]
 
 export function ServicesOverview() {
   return (
-    <section 
-      className="py-20 lg:py-28 bg-gradient-to-b from-background to-muted/30" 
-      itemScope 
+    <section
+      className="py-20 lg:py-28 bg-gradient-to-b from-background to-muted/30"
+      itemScope
       itemType="https://schema.org/ItemList"
       aria-labelledby="services-heading"
     >
@@ -118,7 +142,7 @@ export function ServicesOverview() {
           <span className="mb-4 inline-block rounded-full bg-secondary/10 px-4 py-1.5 text-sm font-semibold text-secondary uppercase tracking-wide">
             Our Services
           </span>
-          <h2 
+          <h2
             id="services-heading"
             className="mb-4 text-balance text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl"
             itemProp="name"
@@ -141,7 +165,7 @@ export function ServicesOverview() {
               itemProp="itemListElement"
             >
               <meta itemProp="position" content={String(index + 1)} />
-              
+
               {/* Service Image with Optimized Loading */}
               <div className="relative h-48 overflow-hidden bg-muted">
                 <Image
@@ -155,7 +179,7 @@ export function ServicesOverview() {
                   itemProp="image"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
-                
+
                 {/* Icon Badge */}
                 <div className="absolute bottom-4 left-4 flex h-12 w-12 items-center justify-center rounded-xl bg-secondary text-secondary-foreground shadow-lg ring-2 ring-white/20 transition-transform group-hover:scale-110">
                   <service.icon className="h-6 w-6" aria-hidden="true" />
@@ -163,13 +187,13 @@ export function ServicesOverview() {
               </div>
 
               <CardContent className="p-6">
-                <h3 
+                <h3
                   className="mb-2 text-lg font-bold group-hover:text-secondary transition-colors"
                   itemProp="name"
                 >
                   {service.title}
                 </h3>
-                <p 
+                <p
                   className="mb-4 text-sm text-muted-foreground leading-relaxed line-clamp-3"
                   itemProp="description"
                 >
@@ -180,7 +204,7 @@ export function ServicesOverview() {
                   className="inline-flex items-center text-sm font-semibold text-secondary hover:text-secondary/80 transition-colors"
                   itemProp="url"
                 >
-                  Learn More 
+                  Learn More
                   <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
                 </Link>
               </CardContent>
@@ -200,12 +224,12 @@ export function ServicesOverview() {
               itemProp="itemListElement"
             >
               <meta itemProp="position" content={String(index + 7)} />
-              
+
               <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-secondary/10 text-secondary transition-all group-hover:bg-secondary group-hover:text-secondary-foreground group-hover:scale-110">
                 <service.icon className="h-5 w-5" aria-hidden="true" />
               </div>
               <div className="min-w-0 flex-1">
-                <h3 
+                <h3
                   className="text-sm font-semibold truncate group-hover:text-secondary transition-colors"
                   itemProp="name"
                 >
@@ -232,11 +256,11 @@ export function ServicesOverview() {
             <p className="text-white/90 mb-8 max-w-2xl mx-auto">
               Get a free, no-obligation quote from Gauteng's most trusted construction and maintenance provider. Licensed, insured, and committed to excellence.
             </p>
-            
+
             {/* Stats */}
             <div className="flex flex-wrap justify-center gap-8 mb-8 text-white">
               <div>
-                <div className="text-3xl font-bold text-accent">10+</div>
+                <div className="text-3xl font-bold text-accent">13+</div>
                 <div className="text-sm text-white/80">Service Categories</div>
               </div>
               <div>
@@ -254,9 +278,9 @@ export function ServicesOverview() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                asChild 
-                size="lg" 
+              <Button
+                asChild
+                size="lg"
                 className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-xl h-14 px-8 font-semibold transition-transform hover:scale-105"
               >
                 <Link href="/contact">
@@ -264,14 +288,14 @@ export function ServicesOverview() {
                   <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
                 </Link>
               </Button>
-              <Button 
-                asChild 
-                size="lg" 
+              <Button
+                asChild
+                size="lg"
                 variant="outline"
                 className="border-white/30 bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm h-14 px-8 font-semibold transition-transform hover:scale-105"
               >
                 <Link href="/services">
-                  View All 10 Services
+                  View All 13 Services
                   <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
                 </Link>
               </Button>
