@@ -6,6 +6,7 @@ import "./globals.css"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { WhatsAppButton } from "@/components/whatsapp-button"
+import { GoogleAdsTag } from "@/components/google-ads-tag"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -112,7 +113,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="format-detection" content="telephone=yes" />
-        
+
         {/* Structured Data for Organization */}
         <script
           type="application/ld+json"
@@ -151,7 +152,7 @@ export default function RootLayout({
             }),
           }}
         />
-        
+
         {/* Structured Data for Local Business */}
         <script
           type="application/ld+json"
@@ -197,6 +198,7 @@ export default function RootLayout({
           <Footer />
         </div>
         <WhatsAppButton />
+        <GoogleAdsTag />
         <Analytics />
       </body>
     </html>
