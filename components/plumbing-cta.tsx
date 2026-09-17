@@ -1,6 +1,7 @@
 "use client"
 
-import { Phone, MessageCircle } from "lucide-react"
+import { Phone } from "lucide-react"
+import { WhatsAppIcon } from "@/components/icons/whatsapp-icon"
 
 /**
  * Central place for the plumbing landing page conversion actions.
@@ -88,7 +89,7 @@ export function WhatsAppCta({
       aria-label="Chat to ZECO Construction on WhatsApp"
       className={`inline-flex items-center justify-center gap-3 rounded-xl bg-[#25D366] font-bold text-white shadow-lg shadow-[#25D366]/30 transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${sizeClasses[size]} ${className}`}
     >
-      <MessageCircle className="h-5 w-5 shrink-0" aria-hidden="true" />
+      <WhatsAppIcon className="h-5 w-5 shrink-0" aria-hidden="true" />
       <span>{label}</span>
     </a>
   )
