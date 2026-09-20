@@ -60,8 +60,7 @@ export function CallButton(props: { size?: Size; label?: string; className?: str
   const className = props.className ?? ""
 
   return (
-    
-      href={`tel:${PHONE_TEL}`}
+      <a href={`tel:${PHONE_TEL}`}
       onClick={trackCallClick}
       data-conversion="phone-call"
       aria-label={`Call ZECO Construction on ${PHONE_DISPLAY}`}
@@ -86,8 +85,7 @@ export function WhatsAppCta(props: {
   const href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
 
   return (
-    
-      href={href}
+      <a href={href}
       target="_blank"
       rel="noopener noreferrer"
       onClick={trackWhatsAppClick}
