@@ -8,6 +8,10 @@ const ADS_ID = "AW-18419053482"
 const CALL_CONVERSION_LABEL = "-zq2COrx-PocEKrn8c5E"
 const WHATSAPP_CONVERSION_LABEL = "tgRECL_Z-_ocEKrn8c5E"
 
+const CALL_HREF = "tel:" + PHONE_TEL
+const WHATSAPP_TEXT = "Hi ZECO, I need a plumber. My plumbing problem is:"
+const WHATSAPP_HREF = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(WHATSAPP_TEXT)
+
 function fireConversion(label: string, callback?: () => void) {
   const gtag = (typeof window !== "undefined" ? (window as any).gtag : undefined) as
     | ((...args: any[]) => void)
@@ -19,7 +23,7 @@ function fireConversion(label: string, callback?: () => void) {
   }
 
   gtag("event", "conversion", {
-    send_to: `${ADS_ID}/${label}`,
+    send_to: ADS_ID + "/" + label,
     event_callback: callback,
   })
 
@@ -38,42 +42,45 @@ export function CallButton(props: { size?: Size; label?: string; className?: str
   const size = props.size ?? "lg"
   const label = props.label
   const className = props.className ?? ""
+  const combinedClassName =
+    "inline-flex items-center justify-center gap-3 rounded-xl bg-secondary font-bold text-secondary-foreground shadow-lg shadow-secondary/30 transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary " +
+    sizeClasses[size] +
+    " " +
+    className
 
   return (
     
-      href={`tel:${PHONE_TEL}`}
+      href={CALL_HREF}
       onClick={() => fireConversion(CALL_CONVERSION_LABEL)}
       data-conversion="phone-call"
-      aria-label={`Call ZECO Construction on ${PHONE_DISPLAY}`}
-      className={`inline-flex items-center justify-center gap-3 rounded-xl bg-secondary font-bold text-secondary-foreground shadow-lg shadow-secondary/30 transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary ${sizeClasses[size]} ${className}`}
+      aria-label={"Call ZECO Construction on " + PHONE_DISPLAY}
+      className={combinedClassName}
     >
       <Phone className="h-5 w-5 shrink-0" aria-hidden="true" />
-      <span>{label ?? `Call ${PHONE_DISPLAY}`}</span>
+      <span>{label ?? "Call " + PHONE_DISPLAY}</span>
     </a>
   )
 }
 
-export function WhatsAppCta(props: {
-  size?: Size
-  message?: string
-  label?: string
-  className?: string
-}) {
+export function WhatsAppCta(props: { size?: Size; label?: string; className?: string }) {
   const size = props.size ?? "lg"
-  const message = props.message ?? "Hi ZECO, I need a plumber. My plumbing problem is:"
   const label = props.label ?? "WhatsApp us"
   const className = props.className ?? ""
-  const href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
+  const combinedClassName =
+    "inline-flex items-center justify-center gap-3 rounded-xl bg-[#25D366] font-bold text-white shadow-lg shadow-[#25D366]/30 transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white " +
+    sizeClasses[size] +
+    " " +
+    className
 
   return (
     
-      href={href}
+      href={WHATSAPP_HREF}
       target="_blank"
       rel="noopener noreferrer"
       onClick={() => fireConversion(WHATSAPP_CONVERSION_LABEL)}
       data-conversion="whatsapp-click"
       aria-label="Chat to ZECO Construction on WhatsApp"
-      className={`inline-flex items-center justify-center gap-3 rounded-xl bg-[#25D366] font-bold text-white shadow-lg shadow-[#25D366]/30 transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${sizeClasses[size]} ${className}`}
+      className={combinedClassName}
     >
       <WhatsAppIcon className="h-5 w-5 shrink-0" aria-hidden="true" />
       <span>{label}</span>
@@ -84,7 +91,7 @@ export function WhatsAppCta(props: {
 export function StickyCallBar() {
   return (
     <div className="fixed inset-x-0 bottom-0 z-50 grid grid-cols-5 gap-2 border-t border-border bg-background/95 p-2 backdrop-blur md:hidden">
-      <CallButton size="bar" label={`Call ${PHONE_DISPLAY}`} className="col-span-3" />
+      <CallButton size="bar" label={"Call " + PHONE_DISPLAY} className="col-span-3" />
       <WhatsAppCta size="bar" label="WhatsApp" className="col-span-2" />
     </div>
   )
