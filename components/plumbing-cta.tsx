@@ -49,7 +49,7 @@ export function CallButton(props: { size?: Size; label?: string; className?: str
     className
 
   return (
-    
+    <a
       href={CALL_HREF}
       onClick={() => fireConversion(CALL_CONVERSION_LABEL)}
       data-conversion="phone-call"
@@ -73,7 +73,7 @@ export function WhatsAppCta(props: { size?: Size; label?: string; className?: st
     className
 
   return (
-    
+    <a
       href={WHATSAPP_HREF}
       target="_blank"
       rel="noopener noreferrer"
