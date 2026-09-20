@@ -16,7 +16,8 @@ import {
   MapPin,
   Droplets,
 } from "lucide-react"
-import { CallButton, WhatsAppCta, StickyCallBar, PHONE_DISPLAY, PHONE_TEL } from "@/components/plumbing-cta"
+import { CallButton, WhatsAppCta, StickyCallBar } from "@/components/plumbing-cta"
+import { PHONE_DISPLAY, PHONE_TEL } from "@/components/contact-info"
 
 export const metadata: Metadata = {
   title: "Geyser Installation & Repairs Gauteng | Kwikot Certified",
