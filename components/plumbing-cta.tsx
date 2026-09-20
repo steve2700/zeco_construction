@@ -2,6 +2,7 @@
 
 import { Phone } from "lucide-react"
 import { WhatsAppIcon } from "@/components/icons/whatsapp-icon"
+import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_NUMBER } from "@/components/contact-info"
 
 /**
  * Central place for the plumbing landing page conversion actions.
@@ -11,10 +12,6 @@ import { WhatsAppIcon } from "@/components/icons/whatsapp-icon"
 const ADS_ID = "AW-18419053482"
 const CALL_CONVERSION_LABEL = "-zq2COrx-PocEKrn8c5E"
 const WHATSAPP_CONVERSION_LABEL = "tgRECL_Z-_ocEKrn8c5E"
-
-export const PHONE_DISPLAY = "074 850 9727"
-export const PHONE_TEL = "+27748509727"
-export const WHATSAPP_NUMBER = "27748509727"
 
 function fireConversion(label: string, callback?: () => void) {
   const gtag = (typeof window !== "undefined" ? (window as any).gtag : undefined) as
@@ -53,7 +50,7 @@ export function CallButton({
   className?: string
 }) {
   return (
-    <a
+    
       href={`tel:${PHONE_TEL}`}
       onClick={() => fireConversion(CALL_CONVERSION_LABEL)}
       data-conversion="phone-call"
@@ -80,7 +77,7 @@ export function WhatsAppCta({
   const href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
 
   return (
-    <a
+    
       href={href}
       target="_blank"
       rel="noopener noreferrer"
