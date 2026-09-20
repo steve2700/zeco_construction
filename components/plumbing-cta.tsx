@@ -4,11 +4,6 @@ import { Phone } from "lucide-react"
 import { WhatsAppIcon } from "@/components/icons/whatsapp-icon"
 import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_NUMBER } from "@/components/contact-info"
 
-/**
- * Central place for the plumbing landing page conversion actions.
- * Labels below are the real "Phone call click" and "WhatsApp click"
- * conversion actions created in Google Ads > Conversions.
- */
 const ADS_ID = "AW-18419053482"
 const CALL_CONVERSION_LABEL = "-zq2COrx-PocEKrn8c5E"
 const WHATSAPP_CONVERSION_LABEL = "tgRECL_Z-_ocEKrn8c5E"
@@ -28,7 +23,6 @@ function fireConversion(label: string, callback?: () => void) {
     event_callback: callback,
   })
 
-  // Don't block navigation if the tag is slow or blocked by an ad blocker.
   window.setTimeout(() => callback?.(), 700)
 }
 
@@ -40,15 +34,11 @@ const sizeClasses: Record<Size, string> = {
   bar: "px-4 py-4 text-base",
 }
 
-export function CallButton({
-  size = "lg",
-  label,
-  className = "",
-}: {
-  size?: Size
-  label?: string
-  className?: string
-}) {
+export function CallButton(props: { size?: Size; label?: string; className?: string }) {
+  const size = props.size ?? "lg"
+  const label = props.label
+  const className = props.className ?? ""
+
   return (
     
       href={`tel:${PHONE_TEL}`}
@@ -63,17 +53,16 @@ export function CallButton({
   )
 }
 
-export function WhatsAppCta({
-  size = "lg",
-  message = "Hi ZECO, I need a plumber. My plumbing problem is:",
-  label = "WhatsApp us",
-  className = "",
-}: {
+export function WhatsAppCta(props: {
   size?: Size
   message?: string
   label?: string
   className?: string
 }) {
+  const size = props.size ?? "lg"
+  const message = props.message ?? "Hi ZECO, I need a plumber. My plumbing problem is:"
+  const label = props.label ?? "WhatsApp us"
+  const className = props.className ?? ""
   const href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
 
   return (
@@ -92,7 +81,6 @@ export function WhatsAppCta({
   )
 }
 
-/** Mobile-only sticky action bar. Most Google Ads plumbing traffic is mobile. */
 export function StickyCallBar() {
   return (
     <div className="fixed inset-x-0 bottom-0 z-50 grid grid-cols-5 gap-2 border-t border-border bg-background/95 p-2 backdrop-blur md:hidden">
