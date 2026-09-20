@@ -32,6 +32,7 @@ import {
 import { WhatsAppIcon } from "@/components/icons/whatsapp-icon"
 import { PinterestIcon } from "@/components/icons/pinterest-icon"
 import { cn } from "@/lib/utils"
+import { trackCallClick, trackWhatsAppClick, trackEmailClick } from "@/components/plumbing-cta"
 
 const services = [
   {
@@ -154,27 +155,33 @@ export function Header() {
       <div className="hidden border-b border-border/50 bg-primary text-primary-foreground lg:block">
         <div className="container mx-auto flex h-10 items-center justify-between px-4 lg:px-8">
           <div className="flex items-center gap-6 text-sm">
-            <a href="tel:+27748509727" className="flex items-center gap-2 hover:text-accent transition-colors">
+            
+              href="tel:+27748509727"
+              onClick={trackCallClick}
+              className="flex items-center gap-2 hover:text-accent transition-colors"
+            >
               <Phone className="h-3.5 w-3.5" />
               +27 74 850 9727
             </a>
-            <a
+            
               href="https://wa.me/27748509727"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={trackWhatsAppClick}
               className="flex items-center gap-2 hover:text-accent transition-colors"
             >
               <WhatsAppIcon className="h-3.5 w-3.5" />
               WhatsApp Us
             </a>
-            <a
+            
               href="mailto:info@zecoconstruction.co.za"
+              onClick={trackEmailClick}
               className="flex items-center gap-2 hover:text-accent transition-colors"
             >
               <Mail className="h-3.5 w-3.5" />
               info@zecoconstruction.co.za
             </a>
-            <a
+            
               href="https://www.google.com/maps?q=ZECO+Construction+Gauteng+South+Africa"
               target="_blank"
               rel="noopener noreferrer"
@@ -187,7 +194,7 @@ export function Header() {
           <div className="flex items-center gap-4">
             <span className="text-xs text-white/70">Follow Us:</span>
             <div className="flex items-center gap-3">
-              <a
+              
                 href="https://www.facebook.com/profile.php?id=61592716047862"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -196,7 +203,7 @@ export function Header() {
               >
                 <Facebook className="h-4 w-4" />
               </a>
-              <a
+              
                 href="https://www.instagram.com/zecoconstruction?igsh=bnFldWhiZ2FpeGph"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -205,7 +212,7 @@ export function Header() {
               >
                 <Instagram className="h-4 w-4" />
               </a>
-              <a
+              
                 href="https://za.pinterest.com/zecoconstruction/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -385,24 +392,33 @@ export function Header() {
                   </Button>
                 </div>
                 <div className="space-y-2 text-sm text-white/90">
-                  <a href="tel:+27748509727" className="flex items-center gap-2 hover:text-white transition-colors">
+                  
+                    href="tel:+27748509727"
+                    onClick={trackCallClick}
+                    className="flex items-center gap-2 hover:text-white transition-colors"
+                  >
                     <Phone className="h-4 w-4" />
                     +27 74 850 9727
                   </a>
-                  <a
+                  
                     href="https://wa.me/27748509727"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={trackWhatsAppClick}
                     className="flex items-center gap-2 hover:text-white transition-colors"
                   >
                     <WhatsAppIcon className="h-4 w-4" />
                     WhatsApp: +27 74 850 9727
                   </a>
-                  <a href="mailto:info@zecoconstruction.co.za" className="flex items-center gap-2 hover:text-white transition-colors">
+                  
+                    href="mailto:info@zecoconstruction.co.za"
+                    onClick={trackEmailClick}
+                    className="flex items-center gap-2 hover:text-white transition-colors"
+                  >
                     <Mail className="h-4 w-4" />
                     info@zecoconstruction.co.za
                   </a>
-                  <a
+                  
                     href="https://www.google.com/maps?q=ZECO+Construction+Gauteng+South+Africa"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -415,7 +431,7 @@ export function Header() {
 
                 {/* Social Links in Mobile */}
                 <div className="flex items-center gap-4 mt-4 pt-4 border-t border-white/20">
-                  <a
+                  
                     href="https://www.facebook.com/profile.php?id=61592716047862"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -424,7 +440,7 @@ export function Header() {
                   >
                     <Facebook className="h-5 w-5" />
                   </a>
-                  <a
+                  
                     href="https://www.instagram.com/zecoconstruction?igsh=bnFldWhiZ2FpeGph"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -433,7 +449,7 @@ export function Header() {
                   >
                     <Instagram className="h-5 w-5" />
                   </a>
-                  <a
+                  
                     href="https://za.pinterest.com/zecoconstruction/"
                     target="_blank"
                     rel="noopener noreferrer"

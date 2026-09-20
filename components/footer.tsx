@@ -1,8 +1,11 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
 import { Facebook, Instagram, Mail, MapPin, Phone, Clock, Award, Shield, Users } from "lucide-react"
 import { WhatsAppIcon } from "@/components/icons/whatsapp-icon"
 import { PinterestIcon } from "@/components/icons/pinterest-icon"
+import { trackCallClick, trackWhatsAppClick, trackEmailClick } from "@/components/plumbing-cta"
 
 const services = [
   { title: "Building Construction", href: "/building-construction-renovations" },
@@ -106,7 +109,7 @@ export function Footer() {
               <h4 className="mb-3 text-sm font-semibold text-white">Follow Us</h4>
 
               <div className="flex gap-3">
-                <a
+                
                   href="https://www.facebook.com/profile.php?id=61592716047862"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -116,7 +119,7 @@ export function Footer() {
                   <Facebook className="h-5 w-5" />
                 </a>
 
-                <a
+                
                   href="https://www.instagram.com/zecoconstruction?igsh=bnFldWhiZ2FpeGph"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -126,7 +129,7 @@ export function Footer() {
                   <Instagram className="h-5 w-5" />
                 </a>
 
-                <a
+                
                   href="https://za.pinterest.com/zecoconstruction/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -136,10 +139,11 @@ export function Footer() {
                   <PinterestIcon className="h-5 w-5" />
                 </a>
 
-                <a
+                
                   href="https://wa.me/27748509727"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={trackWhatsAppClick}
                   className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-foreground/10 text-primary-foreground/70 transition-all hover:bg-[#25D366] hover:text-white"
                   aria-label="WhatsApp"
                 >
@@ -149,7 +153,7 @@ export function Footer() {
 
               {/* Google Reviews */}
               <div className="mt-4">
-                <a
+                
                   href="https://www.google.com/search?q=ZECO+Construction+Gauteng+reviews"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -200,7 +204,7 @@ export function Footer() {
             <h4 className="mb-4 text-sm font-bold uppercase tracking-wider text-white">Contact Us</h4>
             <ul className="space-y-3">
               <li>
-                <a
+                
                   href="https://www.google.com/maps?q=ZECO+Construction+Gauteng+South+Africa"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -216,14 +220,24 @@ export function Footer() {
               </li>
 
               <li>
-                <a href="tel:+27748509727" className="group flex items-center gap-3">
+                
+                  href="tel:+27748509727"
+                  onClick={trackCallClick}
+                  className="group flex items-center gap-3"
+                >
                   <Phone className="h-5 w-5 flex-shrink-0 text-accent" />
                   <span className="text-sm text-primary-foreground/80 transition-colors group-hover:text-accent">+27 74 850 9727</span>
                 </a>
               </li>
 
               <li>
-                <a href="https://wa.me/27748509727" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3">
+                
+                  href="https://wa.me/27748509727"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={trackWhatsAppClick}
+                  className="group flex items-center gap-3"
+                >
                   <WhatsAppIcon className="h-5 w-5 flex-shrink-0 text-accent" />
                   <span className="text-sm text-primary-foreground/80 transition-colors group-hover:text-accent">
                     WhatsApp: +27 74 850 9727
@@ -232,7 +246,11 @@ export function Footer() {
               </li>
 
               <li>
-                <a href="mailto:info@zecoconstruction.co.za" className="group flex items-center gap-3">
+                
+                  href="mailto:info@zecoconstruction.co.za"
+                  onClick={trackEmailClick}
+                  className="group flex items-center gap-3"
+                >
                   <Mail className="h-5 w-5 flex-shrink-0 text-accent" />
                   <span className="text-sm text-primary-foreground/80 transition-colors group-hover:text-accent">
                     info@zecoconstruction.co.za
