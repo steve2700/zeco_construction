@@ -15,7 +15,7 @@ import {
   CheckCircle2,
   MapPin,
 } from "lucide-react"
-import { CallButton, WhatsAppCta, StickyCallBar } from "@/components/plumbing-cta"
+import { CallButton, WhatsAppCta, StickyCallBar, trackCallClick } from "@/components/plumbing-cta"
 import { PHONE_DISPLAY, PHONE_TEL } from "@/components/contact-info"
 export const metadata: Metadata = {
   title: "Blocked Drains Unblocking Gauteng | Fast Drain Cleaning",
@@ -149,6 +149,7 @@ export default function BlockedDrainsPage() {
 
             <a
               href={`tel:${PHONE_TEL}`}
+              onClick={trackCallClick}
               className="group mt-8 flex items-center gap-4 text-white"
               aria-label={`Call ZECO Construction on ${PHONE_DISPLAY}`}
             >
@@ -360,6 +361,7 @@ export default function BlockedDrainsPage() {
           </p>
           <a
             href={`tel:${PHONE_TEL}`}
+            onClick={trackCallClick}
             className="mt-6 inline-block text-4xl font-bold tabular-nums hover:underline sm:text-5xl"
           >
             {PHONE_DISPLAY}
