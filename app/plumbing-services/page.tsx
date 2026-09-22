@@ -6,7 +6,7 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { Clock, ShieldCheck, Star, MapPin, CheckCircle2, Phone } from "lucide-react"
-import { CallButton, WhatsAppCta, StickyCallBar } from "@/components/plumbing-cta"
+import { CallButton, WhatsAppCta, StickyCallBar, trackCallClick } from "@/components/plumbing-cta"
 import { PHONE_DISPLAY, PHONE_TEL } from "@/components/contact-info"
 
 export const metadata: Metadata = {
@@ -142,6 +142,7 @@ export default function PlumbingServicesPage() {
             {/* Phone number as a first class element, not a footer detail */}
             <a
               href={`tel:${PHONE_TEL}`}
+              onClick={trackCallClick}
               className="group mt-8 flex items-center gap-4 text-white"
               aria-label={`Call ZECO Construction on ${PHONE_DISPLAY}`}
             >
@@ -353,6 +354,7 @@ export default function PlumbingServicesPage() {
           </p>
           <a
             href={`tel:${PHONE_TEL}`}
+            onClick={trackCallClick}
             className="mt-6 inline-block text-4xl font-bold tabular-nums hover:underline sm:text-5xl"
           >
             {PHONE_DISPLAY}
