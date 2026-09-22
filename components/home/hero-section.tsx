@@ -30,7 +30,7 @@ export function HeroSection() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-96 w-96 rounded-full bg-accent/5 blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
       </div>
 
-      <div className="container relative mx-auto px-4 py-10 sm:py-14 lg:px-8 lg:py-32">
+      <div className="container relative mx-auto px-4 py-8 sm:py-14 lg:px-8 lg:py-32">
         <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
           {/* Content */}
           <div className="text-center lg:text-left">
@@ -60,7 +60,7 @@ export function HeroSection() {
 
             {/* Homeowner-Friendly Description */}
             <p className="mb-5 text-pretty text-base text-primary-foreground/80 sm:text-lg md:text-xl max-w-2xl mx-auto lg:mx-0" itemProp="description">
-              Need a leaking roof fixed, a new geyser installed, or your kitchen renovated? <strong className="text-white">ZECO Construction</strong> is Gauteng's trusted team for home repairs, renovations, plumbing, electrical and painting — serving <strong className="text-white">Pretoria, Johannesburg, Midrand</strong> and beyond.
+              Need a leaking roof fixed, a new geyser installed, or your kitchen renovated? <strong className="text-white">ZECO Construction</strong> is Gauteng's trusted team for home repairs, renovations, plumbing, electrical and painting, serving <strong className="text-white">Pretoria, Johannesburg, Midrand</strong> and beyond.
             </p>
 
             {/* Trust Indicators with Icons - hidden on mobile to keep CTAs above the fold */}
@@ -111,7 +111,7 @@ export function HeroSection() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-white/30 bg-white/5 text-white hover:bg-white/10 backdrop-blur-sm h-12 sm:h-14 px-8 text-base font-semibold transition-all hover:scale-105"
+                className="border-white/40 bg-white/5 text-white hover:bg-white/15 backdrop-blur-sm h-12 sm:h-14 px-8 text-base font-semibold transition-all hover:scale-105"
               >
                 <Link href="/services">
                   Explore Our Services
@@ -186,10 +186,14 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* Certifications & Trust Badges - SEO Rich */}
-        <div className="mt-10 sm:mt-16 border-t border-white/10 pt-8 sm:pt-10">
+        {/* Certifications & Trust Badges - SEO Rich. Hidden on mobile: this row was
+            leaving dead space below the fold on small screens, and the rest of the
+            hero already hides secondary trust content there. Search engines and
+            screen readers still see it via the "hidden sm:block" pattern used
+            elsewhere in this component. */}
+        <div className="mt-16 hidden border-t border-white/10 pt-10 sm:block">
           <p className="text-center text-sm text-primary-foreground/60 mb-6 font-medium">
-            Trusted by 500+ residential, commercial & industrial clients across Gauteng
+            Trusted by 500+ residential, commercial and industrial clients across Gauteng
           </p>
           <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-8">
             <div className="flex items-center gap-2 text-white/90 bg-white/5 rounded-lg px-4 py-2 backdrop-blur-sm hover:bg-white/10 transition-all">
