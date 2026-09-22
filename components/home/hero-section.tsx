@@ -30,12 +30,12 @@ export function HeroSection() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-96 w-96 rounded-full bg-accent/5 blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
       </div>
 
-      <div className="container relative mx-auto px-4 py-8 sm:py-14 lg:px-8 lg:py-20">
-        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
+      <div className="container relative mx-auto px-4 py-6 sm:py-10 lg:px-8 lg:py-8 xl:py-10">
+        <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
           {/* Content */}
           <div className="text-center lg:text-left">
             {/* Trust Badge with Rating - Structured Data */}
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs sm:text-sm font-medium text-white backdrop-blur-sm border border-white/10 hover:bg-white/15 transition-all shadow-lg">
+            <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs sm:text-sm font-medium text-white backdrop-blur-sm border border-white/10 hover:bg-white/15 transition-all shadow-lg">
               <Shield className="h-4 w-4 text-accent" aria-hidden="true" />
               <span className="hidden sm:inline">Gauteng's Trusted Service Provider</span>
               <span className="sm:hidden">Trusted in Gauteng</span>
@@ -50,36 +50,36 @@ export function HeroSection() {
             </div>
 
             {/* Main Headline - SEO Optimized H1 */}
-            <h1 className="mb-4 text-balance text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl" itemProp="name">
+            <h1 className="mb-3 text-balance text-3xl font-bold tracking-tight text-primary-foreground sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl" itemProp="name">
               <span className="block">We Build Gauteng.</span>
               <span className="block text-accent">From Foundation to Finish.</span>
-              <span className="mt-1 hidden text-xl text-primary-foreground/90 sm:block sm:text-2xl md:text-4xl">
+              <span className="mt-1 hidden text-base text-primary-foreground/90 sm:block sm:text-lg md:text-xl">
                 Roofing, Plumbing, Renovations &amp; More
               </span>
             </h1>
 
             {/* Homeowner-Friendly Description */}
-            <p className="mb-5 text-pretty text-base text-primary-foreground/80 sm:text-lg md:text-xl max-w-2xl mx-auto lg:mx-0" itemProp="description">
+            <p className="mb-4 text-pretty text-sm text-primary-foreground/80 sm:text-base md:text-lg max-w-2xl mx-auto lg:mx-0" itemProp="description">
               Need a leaking roof fixed, a new geyser installed, or your kitchen renovated? <strong className="text-white">ZECO Construction</strong> is Gauteng's trusted team for home repairs, renovations, plumbing, electrical and painting, serving <strong className="text-white">Pretoria, Johannesburg, Midrand</strong> and beyond.
             </p>
 
-            {/* Trust Indicators with Icons - hidden on mobile to keep CTAs above the fold */}
-            <div className="mb-6 hidden sm:flex flex-wrap justify-center gap-4 lg:justify-start">
-              <div className="flex items-center gap-2.5 text-sm text-primary-foreground/90 bg-white/5 rounded-lg px-4 py-2 backdrop-blur-sm">
-                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-accent/20">
-                  <CheckCircle className="h-4 w-4 text-accent" aria-hidden="true" />
+            {/* Trust Indicators with Icons - hidden below lg to keep CTAs above the fold */}
+            <div className="mb-4 hidden lg:flex flex-wrap justify-center gap-3 lg:justify-start">
+              <div className="flex items-center gap-2 text-sm text-primary-foreground/90 bg-white/5 rounded-lg px-3 py-1.5 backdrop-blur-sm">
+                <div className="flex h-7 w-7 items-center justify-center rounded-full bg-accent/20">
+                  <CheckCircle className="h-3.5 w-3.5 text-accent" aria-hidden="true" />
                 </div>
                 <span className="font-medium">Licensed & Compliant</span>
               </div>
-              <div className="flex items-center gap-2.5 text-sm text-primary-foreground/90 bg-white/5 rounded-lg px-4 py-2 backdrop-blur-sm">
-                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-accent/20">
-                  <Award className="h-4 w-4 text-accent" aria-hidden="true" />
+              <div className="flex items-center gap-2 text-sm text-primary-foreground/90 bg-white/5 rounded-lg px-3 py-1.5 backdrop-blur-sm">
+                <div className="flex h-7 w-7 items-center justify-center rounded-full bg-accent/20">
+                  <Award className="h-3.5 w-3.5 text-accent" aria-hidden="true" />
                 </div>
                 <span className="font-medium">Quality Guaranteed</span>
               </div>
-              <div className="flex items-center gap-2.5 text-sm text-primary-foreground/90 bg-white/5 rounded-lg px-4 py-2 backdrop-blur-sm">
-                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-accent/20">
-                  <Clock className="h-4 w-4 text-accent" aria-hidden="true" />
+              <div className="flex items-center gap-2 text-sm text-primary-foreground/90 bg-white/5 rounded-lg px-3 py-1.5 backdrop-blur-sm">
+                <div className="flex h-7 w-7 items-center justify-center rounded-full bg-accent/20">
+                  <Clock className="h-3.5 w-3.5 text-accent" aria-hidden="true" />
                 </div>
                 <span className="font-medium">24/7 Emergency</span>
               </div>
@@ -90,7 +90,7 @@ export function HeroSection() {
               <Button
                 asChild
                 size="lg"
-                className="group bg-accent text-accent-foreground hover:bg-accent/90 shadow-xl shadow-accent/25 h-12 sm:h-14 px-8 text-base font-semibold transition-all hover:scale-105"
+                className="group bg-accent text-accent-foreground hover:bg-accent/90 shadow-xl shadow-accent/25 h-11 lg:h-12 px-6 lg:px-8 text-sm lg:text-base font-semibold transition-all hover:scale-105"
               >
                 <Link href="/contact" itemProp="url">
                   <Phone className="mr-2 h-5 w-5 group-hover:animate-pulse" aria-hidden="true" />
@@ -100,7 +100,7 @@ export function HeroSection() {
               <Button
                 asChild
                 size="lg"
-                className="group h-12 sm:h-14 px-8 text-base font-semibold bg-[#25D366] text-white hover:bg-[#25D366]/90 shadow-xl shadow-[#25D366]/25 transition-all hover:scale-105"
+                className="group h-11 lg:h-12 px-6 lg:px-8 text-sm lg:text-base font-semibold bg-[#25D366] text-white hover:bg-[#25D366]/90 shadow-xl shadow-[#25D366]/25 transition-all hover:scale-105"
               >
                 <a href="https://wa.me/27748509727" target="_blank" rel="noopener noreferrer">
                   <WhatsAppIcon className="mr-2 h-5 w-5" aria-hidden="true" />
@@ -111,7 +111,7 @@ export function HeroSection() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-white/40 bg-white/5 text-white hover:bg-white/15 backdrop-blur-sm h-12 sm:h-14 px-8 text-base font-semibold transition-all hover:scale-105"
+                className="border-white/40 bg-white/5 text-white hover:bg-white/15 backdrop-blur-sm h-11 lg:h-12 px-6 lg:px-8 text-sm lg:text-base font-semibold transition-all hover:scale-105"
               >
                 <Link href="/services">
                   Explore Our Services
@@ -120,8 +120,8 @@ export function HeroSection() {
               </Button>
             </div>
 
-            {/* Quick Stats - hidden on mobile to keep CTAs above the fold */}
-            <div className="mt-6 hidden sm:flex flex-wrap justify-center lg:justify-start gap-6 text-sm text-primary-foreground/70">
+            {/* Quick Stats - hidden below lg to keep CTAs above the fold */}
+            <div className="mt-4 hidden lg:flex flex-wrap justify-center lg:justify-start gap-5 text-sm text-primary-foreground/70">
               <div className="flex items-center gap-2">
                 <Zap className="h-4 w-4 text-accent" aria-hidden="true" />
                 <span>Same-day quotes available</span>
@@ -135,7 +135,7 @@ export function HeroSection() {
 
           {/* Hero Images - Optimized Loading */}
           <div className="relative hidden lg:block" itemProp="image" itemScope itemType="https://schema.org/ImageObject">
-            <div className="relative">
+            <div className="relative mx-auto max-w-md xl:max-w-lg">
               {/* Main Image - Priority Loading */}
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl ring-1 ring-white/10 transition-transform hover:scale-[1.02]">
                 <Image
@@ -145,14 +145,14 @@ export function HeroSection() {
                   className="object-cover"
                   priority
                   quality={85}
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  sizes="(max-width: 1024px) 0px, 40vw"
                   itemProp="contentUrl"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent" />
               </div>
 
               {/* Secondary Image - Lazy Loading */}
-              <div className="absolute -bottom-8 -left-8 aspect-square w-48 overflow-hidden rounded-2xl border-4 border-background shadow-xl ring-1 ring-white/10 transition-transform hover:scale-105">
+              <div className="absolute -bottom-6 -left-6 aspect-square w-32 xl:w-36 overflow-hidden rounded-2xl border-4 border-background shadow-xl ring-1 ring-white/10 transition-transform hover:scale-105">
                 <Image
                   src="/modern-renovated-kitchen-interior-design-south-afr.jpg"
                   alt="Modern renovated kitchen in Gauteng - Completed renovation project by ZECO Construction"
@@ -160,57 +160,57 @@ export function HeroSection() {
                   className="object-cover"
                   loading="lazy"
                   quality={80}
-                  sizes="192px"
+                  sizes="144px"
                 />
               </div>
 
               {/* Stats Card - Animated */}
-              <div className="absolute -bottom-4 -right-4 rounded-2xl bg-card p-6 shadow-2xl border border-border backdrop-blur-sm hover:scale-105 transition-transform">
-                <div className="flex items-center gap-4">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-accent to-accent/80 shadow-lg">
-                    <Award className="h-7 w-7 text-accent-foreground" aria-hidden="true" />
+              <div className="absolute -bottom-4 -right-4 rounded-2xl bg-card p-4 shadow-2xl border border-border backdrop-blur-sm hover:scale-105 transition-transform">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-accent to-accent/80 shadow-lg">
+                    <Award className="h-5 w-5 text-accent-foreground" aria-hidden="true" />
                   </div>
                   <div>
-                    <p className="text-3xl font-bold text-card-foreground">10+</p>
-                    <p className="text-sm text-muted-foreground">Service Categories</p>
+                    <p className="text-xl font-bold text-card-foreground">10+</p>
+                    <p className="text-xs text-muted-foreground">Service Categories</p>
                   </div>
                 </div>
               </div>
 
               {/* Experience Badge */}
-              <div className="absolute -top-4 right-12 rounded-xl bg-secondary px-4 py-3 shadow-xl ring-1 ring-white/10 hover:scale-105 transition-transform">
-                <p className="text-2xl font-bold text-secondary-foreground">10+</p>
-                <p className="text-xs text-secondary-foreground/80">Years Experience</p>
+              <div className="absolute -top-3 right-10 rounded-xl bg-secondary px-3 py-2 shadow-xl ring-1 ring-white/10 hover:scale-105 transition-transform">
+                <p className="text-lg font-bold text-secondary-foreground">10+</p>
+                <p className="text-[10px] text-secondary-foreground/80">Years Experience</p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Certifications & Trust Badges - SEO Rich. Hidden on mobile: this row was
-            leaving dead space below the fold on small screens, and the rest of the
-            hero already hides secondary trust content there. Search engines and
-            screen readers still see it via the "hidden sm:block" pattern used
-            elsewhere in this component. */}
-        <div className="mt-16 hidden border-t border-white/10 pt-10 sm:block">
-          <p className="text-center text-sm text-primary-foreground/60 mb-6 font-medium">
+        {/* Certifications & Trust Badges - SEO Rich. Hidden below xl: this row was
+            leaving dead space below the fold on smaller desktop screens, and the
+            rest of the hero already hides secondary trust content there. Search
+            engines and screen readers still see it via the "hidden xl:block"
+            pattern used elsewhere in this component. */}
+        <div className="mt-6 hidden border-t border-white/10 pt-5 xl:block">
+          <p className="text-center text-xs text-primary-foreground/60 mb-4 font-medium">
             Trusted by 500+ residential, commercial and industrial clients across Gauteng
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-8">
-            <div className="flex items-center gap-2 text-white/90 bg-white/5 rounded-lg px-4 py-2 backdrop-blur-sm hover:bg-white/10 transition-all">
-              <Shield className="h-5 w-5 text-accent" aria-hidden="true" />
-              <span className="text-sm font-semibold">NHBRC Registered</span>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <div className="flex items-center gap-2 text-white/90 bg-white/5 rounded-lg px-3 py-1.5 backdrop-blur-sm hover:bg-white/10 transition-all">
+              <Shield className="h-4 w-4 text-accent" aria-hidden="true" />
+              <span className="text-xs font-semibold">NHBRC Registered</span>
             </div>
-            <div className="flex items-center gap-2 text-white/90 bg-white/5 rounded-lg px-4 py-2 backdrop-blur-sm hover:bg-white/10 transition-all">
-              <Award className="h-5 w-5 text-accent" aria-hidden="true" />
-              <span className="text-sm font-semibold">CIDB Graded</span>
+            <div className="flex items-center gap-2 text-white/90 bg-white/5 rounded-lg px-3 py-1.5 backdrop-blur-sm hover:bg-white/10 transition-all">
+              <Award className="h-4 w-4 text-accent" aria-hidden="true" />
+              <span className="text-xs font-semibold">CIDB Graded</span>
             </div>
-            <div className="flex items-center gap-2 text-white/90 bg-white/5 rounded-lg px-4 py-2 backdrop-blur-sm hover:bg-white/10 transition-all">
-              <CheckCircle className="h-5 w-5 text-accent" aria-hidden="true" />
-              <span className="text-sm font-semibold">SABS Compliant</span>
+            <div className="flex items-center gap-2 text-white/90 bg-white/5 rounded-lg px-3 py-1.5 backdrop-blur-sm hover:bg-white/10 transition-all">
+              <CheckCircle className="h-4 w-4 text-accent" aria-hidden="true" />
+              <span className="text-xs font-semibold">SABS Compliant</span>
             </div>
-            <div className="flex items-center gap-2 text-white/90 bg-white/5 rounded-lg px-4 py-2 backdrop-blur-sm hover:bg-white/10 transition-all">
-              <Shield className="h-5 w-5 text-accent" aria-hidden="true" />
-              <span className="text-sm font-semibold">ECSA Certified</span>
+            <div className="flex items-center gap-2 text-white/90 bg-white/5 rounded-lg px-3 py-1.5 backdrop-blur-sm hover:bg-white/10 transition-all">
+              <Shield className="h-4 w-4 text-accent" aria-hidden="true" />
+              <span className="text-xs font-semibold">ECSA Certified</span>
             </div>
           </div>
         </div>
