@@ -6,6 +6,8 @@ import {
   Building2,
   Wrench,
   Droplets,
+  Droplet,
+  Gauge,
   Zap,
   Home,
   Shield,
@@ -45,6 +47,24 @@ const services = [
     href: "/plumbing-services",
     image: "/professional-plumber-working-on-pipes-installation.jpg",
     keywords: "plumbing, leak detection, geyser repairs",
+  },
+  {
+    icon: Droplet,
+    title: "JoJo Water Tank Installation",
+    description:
+      "Stand, plumbing, pump and pressure system, all installed properly. JoJo tank installers across Pretoria, Johannesburg and Midrand.",
+    href: "/jojo-water-tank-installation",
+    image: "/jojo_installation.jpg",
+    keywords: "jojo tank installation, water tank installer, tank pump",
+  },
+  {
+    icon: Gauge,
+    title: "Pump Installation & Repairs",
+    description:
+      "Borehole, pressure and submersible pump installation and repairs, wired and plumbed into your existing water system.",
+    href: "/pump-installation-repairs",
+    image: "/pump_installation_hero.jpg",
+    keywords: "pump installation, borehole pump, pressure pump repairs",
   },
   {
     icon: Zap,
@@ -128,6 +148,8 @@ const services = [
   },
 ]
 
+const FEATURED_COUNT = 8
+
 export function ServicesOverview() {
   return (
     <section
@@ -156,7 +178,7 @@ export function ServicesOverview() {
 
         {/* Featured Services - Cards with Images */}
         <div className="mb-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {services.slice(0, 6).map((service, index) => (
+          {services.slice(0, FEATURED_COUNT).map((service, index) => (
             <Card
               key={service.href}
               className="group overflow-hidden border-border transition-all duration-300 hover:border-secondary hover:shadow-2xl hover:-translate-y-1"
@@ -214,7 +236,7 @@ export function ServicesOverview() {
 
         {/* Additional Services - Compact List */}
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-          {services.slice(6).map((service, index) => (
+          {services.slice(FEATURED_COUNT).map((service, index) => (
             <Link
               key={service.href}
               href={service.href}
@@ -223,7 +245,7 @@ export function ServicesOverview() {
               itemType="https://schema.org/Service"
               itemProp="itemListElement"
             >
-              <meta itemProp="position" content={String(index + 7)} />
+              <meta itemProp="position" content={String(index + FEATURED_COUNT + 1)} />
 
               <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-secondary/10 text-secondary transition-all group-hover:bg-secondary group-hover:text-secondary-foreground group-hover:scale-110">
                 <service.icon className="h-5 w-5" aria-hidden="true" />
@@ -260,7 +282,7 @@ export function ServicesOverview() {
             {/* Stats */}
             <div className="flex flex-wrap justify-center gap-8 mb-8 text-white">
               <div>
-                <div className="text-3xl font-bold text-accent">13+</div>
+                <div className="text-3xl font-bold text-accent">15+</div>
                 <div className="text-sm text-white/80">Service Categories</div>
               </div>
               <div>
@@ -295,7 +317,7 @@ export function ServicesOverview() {
                 className="border-white/30 bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm h-14 px-8 font-semibold transition-transform hover:scale-105"
               >
                 <Link href="/services">
-                  View All 13 Services
+                  View All 15 Services
                   <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
                 </Link>
               </Button>
