@@ -11,6 +11,8 @@ import {
   Building2,
   Wrench,
   Droplets,
+  Droplet,
+  Gauge,
   Zap,
   Home,
   Shield,
@@ -31,8 +33,8 @@ import {
 export const metadata: Metadata = {
   title: "Our Services | Construction, Maintenance & Infrastructure Solutions in Gauteng | ZECO Construction",
   description:
-    "Explore ZECO Construction's comprehensive services: construction, renovations, plumbing, electrical, roofing, waterproofing, paving, and concrete works in Pretoria, Johannesburg & Midrand. Licensed NHBRC & CIDB contractors.",
-  keywords: "construction services Gauteng, maintenance Pretoria, building contractors Johannesburg, plumbing electrical roofing, paving concrete Midrand",
+    "Explore ZECO Construction's comprehensive services: construction, renovations, plumbing, JoJo tank installation, electrical, roofing, waterproofing, paving, and concrete works in Pretoria, Johannesburg & Midrand. Licensed NHBRC & CIDB contractors.",
+  keywords: "construction services Gauteng, maintenance Pretoria, building contractors Johannesburg, plumbing electrical roofing, jojo tank installation, paving concrete Midrand",
   openGraph: {
     title: "Our Services | ZECO Construction - Gauteng's Trusted Building Partner",
     description:
@@ -55,6 +57,7 @@ const services = [
     description:
       "New residential, commercial, and industrial buildings. Complete renovations, refurbishments, fit-outs, home extensions, structural alterations, and office space optimization.",
     href: "/building-construction-renovations",
+    image: "/modern-building-construction-site-with-scaffolding.jpg",
     features: [
       "New residential builds",
       "Commercial construction",
@@ -70,6 +73,7 @@ const services = [
     description:
       "Comprehensive residential and commercial maintenance, preventative programs, general repairs, handyman services, and ongoing facility maintenance support.",
     href: "/property-maintenance",
+    image: "/property-maintenance-worker-fixing-repairs-profess.jpg",
     features: [
       "Residential maintenance",
       "Commercial maintenance",
@@ -85,7 +89,28 @@ const services = [
     description:
       "Complete plumbing installations and repairs, leak detection, burst pipe repairs, drain cleaning and unblocking, geyser installation and maintenance.",
     href: "/plumbing-services",
+    image: "/professional-plumber-working-on-pipes-installation.jpg",
     features: ["Installations & repairs", "Leak detection", "Burst pipe repairs", "Geyser services", "Drain cleaning"],
+    featured: false,
+  },
+  {
+    icon: Droplet,
+    title: "JoJo Water Tank Installation",
+    description:
+      "Full JoJo tank installation service: tank sizing, stand construction, plumbing connections, pump and pressure system setup, and a pressure test before handover.",
+    href: "/jojo-water-tank-installation",
+    image: "/jojo_installation.jpg",
+    features: ["Tank sizing & site visit", "Stand & base preparation", "Pump & pressure systems", "Pressure tested handover", "Multi-tank installs"],
+    featured: true,
+  },
+  {
+    icon: Gauge,
+    title: "Pump Installation & Repairs",
+    description:
+      "Borehole, pressure and submersible pump installation and repairs. Correctly sized, wired and plumbed into your existing water supply, with faults diagnosed properly rather than guessed at.",
+    href: "/pump-installation-repairs",
+    image: "/pump_installation_hero.jpg",
+    features: ["Borehole pump installs", "Pressure pump systems", "Submersible pump repairs", "Wiring & controller setup", "Fault diagnosis"],
     featured: false,
   },
   {
@@ -94,6 +119,7 @@ const services = [
     description:
       "Electrical installations and rewiring, fault finding and repairs, lighting installations, power point installations, and comprehensive electrical maintenance.",
     href: "/electrical-services",
+    image: "/electrician-working-on-electrical-panel-wiring-sou.jpg",
     features: [
       "Installations & rewiring",
       "Fault finding",
@@ -109,6 +135,7 @@ const services = [
     description:
       "Expert roof leak detection and repairs, tile, IBR, and corrugated roofing, waterproofing and sealing, gutter installation and repairs.",
     href: "/roofing-roof-leak-repairs",
+    image: "/roofer-installing-tiles-on-residential-roof-south-.jpg",
     features: [
       "Leak detection & repairs",
       "Tile roofing",
@@ -124,6 +151,7 @@ const services = [
     description:
       "Professional waterproofing for roofs, balconies, bathrooms, foundation and wall waterproofing, damp proofing for complete moisture protection.",
     href: "/waterproofing-services",
+    image: "/waterproofing-membrane-application-on-roof-south-a.jpg",
     features: [
       "Roof waterproofing",
       "Balcony waterproofing",
@@ -139,6 +167,7 @@ const services = [
     description:
       "Quality roof timber structures, custom doors, frames, and trims, decking, pergolas, cabinetry, and general carpentry repairs.",
     href: "/carpentry-services",
+    image: "/carpenter-craftsman-working-on-wood-cabinetry-work.jpg",
     features: ["Roof timber structures", "Doors & frames", "Decking & pergolas", "Cabinetry", "Carpentry repairs"],
     featured: false,
   },
@@ -148,6 +177,7 @@ const services = [
     description:
       "Custom kitchen cupboards, bathroom vanities and storage units, built-in cupboards, repairs and upgrades designed for maximum functionality.",
     href: "/kitchen-bathroom-cupboards",
+    image: "/modern-kitchen-renovation-with-white-cabinets-sout.jpg",
     features: [
       "Custom kitchen cupboards",
       "Bathroom vanities",
@@ -163,6 +193,7 @@ const services = [
     description:
       "Interior and exterior painting, floor and wall tiling, surface preparation and sealing, decorative finishes for lasting quality.",
     href: "/painting-tiling-finishing",
+    image: "/professional-painter-painting-interior-wall-home-r.jpg",
     features: [
       "Interior painting",
       "Exterior painting",
@@ -178,6 +209,7 @@ const services = [
     description:
       "Brick paving, tar paving, driveway construction, walkways and parking areas, paving repairs and resurfacing.",
     href: "/paving-driveways-surfacing",
+    image: "/brick-paving-driveway-installation-residential-sou.jpg",
     features: ["Brick paving", "Tar paving", "Driveway construction", "Walkways & parking", "Repairs & resurfacing"],
     featured: false,
   },
@@ -187,13 +219,14 @@ const services = [
     description:
       "Concrete slabs and foundations, pathways and driveways, bricklaying and plastering, structural concrete works.",
     href: "/concrete-works-bricklaying",
+    image: null,
     features: ["Concrete slabs", "Foundations", "Bricklaying", "Plastering", "Structural concrete"],
     featured: false,
   },
 ]
 
 const stats = [
-  { value: "11+", label: "Service Categories", icon: Award },
+  { value: "13+", label: "Service Categories", icon: Award },
   { value: "500+", label: "Projects Completed", icon: CheckCircle },
   { value: "10+", label: "Years Experience", icon: Clock },
   { value: "24/7", label: "Emergency Support", icon: Phone },
@@ -248,7 +281,7 @@ export default function ServicesPage() {
             </div>
 
             <h1 className="mb-6 text-balance text-4xl font-bold tracking-tight text-primary-foreground md:text-5xl lg:text-6xl">
-              <span className="text-accent">11+</span> Professional Services <br />Across Gauteng
+              <span className="text-accent">13+</span> Professional Services <br />Across Gauteng
             </h1>
             <p className="text-pretty text-lg text-primary-foreground/90 md:text-xl leading-relaxed mb-8">
               <strong className="text-white">ZECO Construction</strong> offers comprehensive building and maintenance services. We minimize the need for multiple contractors by providing integrated,
@@ -288,7 +321,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Services Grid - Enhanced */}
+      {/* Services Grid - Enhanced, with photos */}
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
@@ -307,27 +340,51 @@ export default function ServicesPage() {
             {services.map((service) => (
               <Card
                 key={service.title}
-                className={`group flex flex-col transition-all hover:shadow-2xl hover:-translate-y-2 ${
-                  service.featured 
-                    ? 'border-2 border-secondary ring-1 ring-secondary/20' 
+                className={`group flex flex-col overflow-hidden transition-all hover:shadow-2xl hover:-translate-y-2 ${
+                  service.featured
+                    ? 'border-2 border-secondary ring-1 ring-secondary/20'
                     : 'border-border'
                 }`}
               >
-                <CardHeader>
-                  <div className="flex items-start justify-between mb-4">
-                    <div className={`flex h-14 w-14 items-center justify-center rounded-xl transition-all group-hover:scale-110 ${
-                      service.featured 
-                        ? 'bg-gradient-to-br from-secondary to-secondary/80 text-secondary-foreground shadow-lg' 
-                        : 'bg-secondary/10 text-secondary group-hover:bg-secondary group-hover:text-secondary-foreground'
-                    }`}>
-                      <service.icon className="h-7 w-7" aria-hidden="true" />
+                {service.image ? (
+                  // Card with a real photo: image strip on top, icon badge overlaid
+                  <div className="relative h-48 overflow-hidden bg-muted">
+                    <Image
+                      src={service.image}
+                      alt={`${service.title} in Gauteng by ZECO Construction`}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      loading="lazy"
+                      quality={85}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+                    <div className="absolute bottom-4 left-4 flex h-12 w-12 items-center justify-center rounded-xl bg-secondary text-secondary-foreground shadow-lg ring-2 ring-white/20 transition-transform group-hover:scale-110">
+                      <service.icon className="h-6 w-6" aria-hidden="true" />
                     </div>
                     {service.featured && (
-                      <span className="rounded-full bg-gradient-to-r from-accent to-accent/80 px-3 py-1 text-xs font-bold text-accent-foreground shadow-md">
+                      <span className="absolute top-4 right-4 rounded-full bg-gradient-to-r from-accent to-accent/80 px-3 py-1 text-xs font-bold text-accent-foreground shadow-md">
                         POPULAR
                       </span>
                     )}
                   </div>
+                ) : (
+                  // Fallback for services without a photo yet: icon-only header
+                  <CardHeader>
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-secondary/10 text-secondary transition-all group-hover:scale-110 group-hover:bg-secondary group-hover:text-secondary-foreground">
+                        <service.icon className="h-7 w-7" aria-hidden="true" />
+                      </div>
+                      {service.featured && (
+                        <span className="rounded-full bg-gradient-to-r from-accent to-accent/80 px-3 py-1 text-xs font-bold text-accent-foreground shadow-md">
+                          POPULAR
+                        </span>
+                      )}
+                    </div>
+                  </CardHeader>
+                )}
+
+                <CardHeader className={service.image ? "pb-0" : "pt-0"}>
                   <CardTitle className="text-xl group-hover:text-secondary transition-colors">
                     {service.title}
                   </CardTitle>
