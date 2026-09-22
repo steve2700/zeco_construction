@@ -30,7 +30,7 @@ export function HeroSection() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-96 w-96 rounded-full bg-accent/5 blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
       </div>
 
-      <div className="container relative mx-auto px-4 py-8 sm:py-14 lg:px-8 lg:py-32">
+      <div className="container relative mx-auto px-4 py-8 sm:py-14 lg:px-8 lg:py-20">
         <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
           {/* Content */}
           <div className="text-center lg:text-left">
