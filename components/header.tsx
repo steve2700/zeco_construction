@@ -16,6 +16,8 @@ import {
   Building2,
   Wrench,
   Droplets,
+  Droplet,
+  Gauge,
   Zap,
   Home,
   Shield,
@@ -52,6 +54,18 @@ const services = [
     href: "/plumbing-services",
     description: "Installations, repairs, leak detection & geysers",
     icon: Droplets,
+  },
+  {
+    title: "JoJo Water Tank Installation",
+    href: "/jojo-water-tank-installation",
+    description: "Tank stands, plumbing, pumps & pressure systems",
+    icon: Droplet,
+  },
+  {
+    title: "Pump Installation & Repairs",
+    href: "/pump-installation-repairs",
+    description: "Borehole, pressure & submersible pump installs and repairs",
+    icon: Gauge,
   },
   {
     title: "Electrical Repairs & Installations",
@@ -308,7 +322,7 @@ export function Header() {
                       onClick={() => setServicesOpen(false)}
                       className="flex items-center justify-center gap-2 rounded-md bg-primary/5 p-3 text-sm font-semibold text-primary hover:bg-primary hover:text-white transition-all"
                     >
-                      View All 13 Services <ChevronRight className="h-4 w-4" />
+                      View All 15 Services <ChevronRight className="h-4 w-4" />
                     </Link>
                   </div>
                 </div>
@@ -504,7 +518,7 @@ export function Header() {
                       )}
                     >
                       <div className="grid grid-cols-2 gap-2 px-4 pb-4">
-                        {services.slice(0, 8).map((service) => (
+                        {services.slice(0, 10).map((service) => (
                           <Link
                             key={service.href}
                             href={service.href}
@@ -521,7 +535,7 @@ export function Header() {
                         className="mx-4 mb-4 flex items-center justify-center gap-2 rounded-xl border-2 border-dashed border-secondary/30 p-3 text-sm font-medium text-secondary hover:bg-secondary/5 transition-colors"
                         onClick={() => setIsOpen(false)}
                       >
-                        View All 13 Services
+                        View All 15 Services
                         <ChevronRight className="h-4 w-4" />
                       </Link>
                     </div>
