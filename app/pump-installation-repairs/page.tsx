@@ -155,7 +155,7 @@ export default function PumpInstallationRepairsPage() {
               happening and we'll tell you honestly whether it needs a repair or a new pump.
             </p>
 
-            
+            <a
               href={`tel:${PHONE_TEL}`}
               onClick={trackCallClick}
               className="group mt-8 flex items-center gap-4 text-white"
@@ -390,7 +390,7 @@ export default function PumpInstallationRepairsPage() {
             Call now for an honest repair-or-replace answer, or send us a photo on WhatsApp and we'll tell
             you what it needs.
           </p>
-          
+          <a
             href={`tel:${PHONE_TEL}`}
             onClick={trackCallClick}
             className="mt-6 inline-block text-4xl font-bold tabular-nums hover:underline sm:text-5xl"
