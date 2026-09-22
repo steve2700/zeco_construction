@@ -8,6 +8,8 @@ const services = [
   "building-construction-renovations",
   "property-maintenance",
   "plumbing-services",
+  "jojo-water-tank-installation",
+  "pump-installation-repairs",
   "emergency-plumber-burst-pipes",
   "geyser-installation-repairs",
   "blocked-drains-unblocking",
@@ -50,7 +52,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}/${slug}`,
     lastModified,
     changeFrequency: "monthly",
-    priority: 0.8,
+    priority:
+      slug === "jojo-water-tank-installation" || slug === "pump-installation-repairs"
+        ? 0.85
+        : 0.8,
   }))
 
   const serviceAreaPages: MetadataRoute.Sitemap = serviceAreas.map((slug) => ({
