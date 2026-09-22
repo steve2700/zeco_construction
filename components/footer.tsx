@@ -11,6 +11,8 @@ const services = [
   { title: "Building Construction", href: "/building-construction-renovations" },
   { title: "Property Maintenance", href: "/property-maintenance" },
   { title: "Plumbing Services", href: "/plumbing-services" },
+  { title: "JoJo Water Tank Installation", href: "/jojo-water-tank-installation" },
+  { title: "Pump Installation & Repairs", href: "/pump-installation-repairs" },
   { title: "Emergency Plumber & Burst Pipes", href: "/emergency-plumber-burst-pipes" },
   { title: "Geyser Installation & Repairs", href: "/geyser-installation-repairs" },
   { title: "Blocked Drains Unblocking", href: "/blocked-drains-unblocking" },
@@ -109,7 +111,7 @@ export function Footer() {
               <h4 className="mb-3 text-sm font-semibold text-white">Follow Us</h4>
 
               <div className="flex gap-3">
-                  <a href="https://www.facebook.com/profile.php?id=61592716047862"
+                <a href="https://www.facebook.com/profile.php?id=61592716047862"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-foreground/10 text-primary-foreground/70 transition-all hover:bg-accent hover:text-white"
@@ -118,7 +120,7 @@ export function Footer() {
                   <Facebook className="h-5 w-5" />
                 </a>
 
-                  <a href="https://www.instagram.com/zecoconstruction?igsh=bnFldWhiZ2FpeGph"
+                <a href="https://www.instagram.com/zecoconstruction?igsh=bnFldWhiZ2FpeGph"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-foreground/10 text-primary-foreground/70 transition-all hover:bg-accent hover:text-white"
@@ -127,7 +129,7 @@ export function Footer() {
                   <Instagram className="h-5 w-5" />
                 </a>
 
-                  <a href="https://za.pinterest.com/zecoconstruction/"
+                <a href="https://za.pinterest.com/zecoconstruction/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-foreground/10 text-primary-foreground/70 transition-all hover:bg-accent hover:text-white"
@@ -136,7 +138,7 @@ export function Footer() {
                   <PinterestIcon className="h-5 w-5" />
                 </a>
 
-                  <a href="https://wa.me/27748509727"
+                <a href="https://wa.me/27748509727"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={trackWhatsAppClick}
@@ -149,7 +151,7 @@ export function Footer() {
 
               {/* Google Reviews */}
               <div className="mt-4">
-                  <a href="https://www.google.com/search?q=ZECO+Construction+Gauteng+reviews"
+                <a href="https://www.google.com/search?q=ZECO+Construction+Gauteng+reviews"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-lg bg-primary-foreground/10 px-4 py-2 text-sm text-primary-foreground/80 transition hover:bg-accent hover:text-white"
@@ -199,7 +201,7 @@ export function Footer() {
             <h4 className="mb-4 text-sm font-bold uppercase tracking-wider text-white">Contact Us</h4>
             <ul className="space-y-3">
               <li>
-                  <a href="https://www.google.com/maps?q=ZECO+Construction+Gauteng+South+Africa"
+                <a href="https://www.google.com/maps?q=ZECO+Construction+Gauteng+South+Africa"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-start gap-3"
@@ -214,7 +216,7 @@ export function Footer() {
               </li>
 
               <li>
-                  <a href="tel:+27748509727"
+                <a href="tel:+27748509727"
                   onClick={trackCallClick}
                   className="group flex items-center gap-3"
                 >
@@ -224,7 +226,7 @@ export function Footer() {
               </li>
 
               <li>
-                  <a href="https://wa.me/27748509727"
+                <a href="https://wa.me/27748509727"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={trackWhatsAppClick}
@@ -238,7 +240,7 @@ export function Footer() {
               </li>
 
               <li>
-                  <a href="mailto:info@zecoconstruction.co.za"
+                <a href="mailto:info@zecoconstruction.co.za"
                   onClick={trackEmailClick}
                   className="group flex items-center gap-3"
                 >
