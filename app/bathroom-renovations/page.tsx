@@ -169,6 +169,7 @@ export default function BathroomRenovationsPage() {
             </p>
 
             
+              <a
               href={`tel:${PHONE_TEL}`}
               onClick={trackCallClick}
               className="group mt-8 flex items-center gap-4 text-white"
@@ -446,6 +447,7 @@ export default function BathroomRenovationsPage() {
             tell you what it needs.
           </p>
           
+            <a
             href={`tel:${PHONE_TEL}`}
             onClick={trackCallClick}
             className="mt-6 inline-block text-4xl font-bold tabular-nums hover:underline sm:text-5xl"
