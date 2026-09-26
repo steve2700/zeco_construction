@@ -125,7 +125,7 @@ export function ServicePageTemplate({
             <div className="relative hidden lg:block">
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl ring-1 ring-white/10">
                 <Image
-                  src={heroImage || "/placeholder.svg"}
+                  src={heroImage || "/modern-building-construction-site-with-scaffolding.jpg"}
                   alt={`Professional ${title} services in Gauteng - ZECO Construction`}
                   fill
                   className="object-cover transition-transform duration-700 hover:scale-105"
@@ -193,7 +193,7 @@ export function ServicePageTemplate({
             <div className="lg:hidden">
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-xl">
                 <Image
-                  src={heroImage || "/placeholder.svg"}
+                  src={heroImage || "/modern-building-construction-site-with-scaffolding.jpg"}
                   alt={`${title} - ZECO Construction`}
                   fill
                   className="object-cover"

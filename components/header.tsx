@@ -30,6 +30,8 @@ import {
   AlertTriangle,
   Flame,
   Waves,
+  Bath,
+  Images,
 } from "lucide-react"
 import { WhatsAppIcon } from "@/components/icons/whatsapp-icon"
 import { PinterestIcon } from "@/components/icons/pinterest-icon"
@@ -96,6 +98,12 @@ const services = [
     href: "/kitchen-bathroom-cupboards",
     description: "Custom cupboards, vanities & built-in storage",
     icon: Construction,
+  },
+  {
+    title: "Bathroom Renovations",
+    href: "/bathroom-renovations",
+    description: "Full bathroom remodels, fittings & waterproofing",
+    icon: Bath,
   },
   {
     title: "Painting, Tiling & Finishing",
@@ -322,13 +330,20 @@ export function Header() {
                       onClick={() => setServicesOpen(false)}
                       className="flex items-center justify-center gap-2 rounded-md bg-primary/5 p-3 text-sm font-semibold text-primary hover:bg-primary hover:text-white transition-all"
                     >
-                      View All 15 Services <ChevronRight className="h-4 w-4" />
+                      View All 16 Services <ChevronRight className="h-4 w-4" />
                     </Link>
                   </div>
                 </div>
               </div>
             )}
           </div>
+
+          <Link
+            href="/gallery"
+            className="inline-flex h-10 items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-muted hover:text-secondary"
+          >
+            Gallery
+          </Link>
 
           <Link
             href="/service-areas"
@@ -535,11 +550,22 @@ export function Header() {
                         className="mx-4 mb-4 flex items-center justify-center gap-2 rounded-xl border-2 border-dashed border-secondary/30 p-3 text-sm font-medium text-secondary hover:bg-secondary/5 transition-colors"
                         onClick={() => setIsOpen(false)}
                       >
-                        View All 15 Services
+                        View All 16 Services
                         <ChevronRight className="h-4 w-4" />
                       </Link>
                     </div>
                   </div>
+
+                  <Link
+                    href="/gallery"
+                    className="flex items-center gap-3 rounded-xl p-4 text-lg font-medium hover:bg-muted transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-secondary/10 text-secondary">
+                      <Images className="h-5 w-5" />
+                    </div>
+                    Gallery
+                  </Link>
 
                   <Link
                     href="/service-areas"

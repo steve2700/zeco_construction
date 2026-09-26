@@ -13,12 +13,17 @@ const services = [
   { title: "Plumbing Services", href: "/plumbing-services" },
   { title: "JoJo Water Tank Installation", href: "/jojo-water-tank-installation" },
   { title: "Pump Installation & Repairs", href: "/pump-installation-repairs" },
-  { title: "Emergency Plumber & Burst Pipes", href: "/emergency-plumber-burst-pipes" },
-  { title: "Geyser Installation & Repairs", href: "/geyser-installation-repairs" },
-  { title: "Blocked Drains Unblocking", href: "/blocked-drains-unblocking" },
   { title: "Electrical Services", href: "/electrical-services" },
   { title: "Roofing & Repairs", href: "/roofing-roof-leak-repairs" },
   { title: "Waterproofing", href: "/waterproofing-services" },
+  { title: "Carpentry Services", href: "/carpentry-services" },
+  { title: "Kitchen & Bathroom Cupboards", href: "/kitchen-bathroom-cupboards" },
+  { title: "Bathroom Renovations", href: "/bathroom-renovations" },
+  { title: "Painting, Tiling & Finishing", href: "/painting-tiling-finishing" },
+  { title: "Paving & Driveways", href: "/paving-driveways-surfacing" },
+  { title: "Emergency Plumber & Burst Pipes", href: "/emergency-plumber-burst-pipes" },
+  { title: "Geyser Installation & Repairs", href: "/geyser-installation-repairs" },
+  { title: "Blocked Drains Unblocking", href: "/blocked-drains-unblocking" },
 ]
 
 const serviceAreas = [
@@ -33,6 +38,7 @@ const serviceAreas = [
 const quickLinks = [
   { title: "About Us", href: "/about" },
   { title: "All Services", href: "/services" },
+  { title: "Gallery", href: "/gallery" },
   { title: "Service Areas", href: "/service-areas" },
   { title: "Contact Us", href: "/contact" },
   { title: "Get a Quote", href: "/contact#quote" },
@@ -80,7 +86,7 @@ export function Footer() {
 
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-12 lg:px-8">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-6">
           {/* Company Info */}
           <div className="space-y-4 lg:col-span-2">
             <Link href="/" className="flex items-center gap-3">
@@ -164,7 +170,7 @@ export function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="lg:col-span-1">
             <h4 className="mb-4 text-sm font-bold uppercase tracking-wider text-white">Quick Links</h4>
             <ul className="space-y-2.5">
               {quickLinks.map((link) => (
@@ -177,27 +183,36 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
-          <div>
+          {/* Services — 2 columns of 8 */}
+          <div className="lg:col-span-2">
             <h4 className="mb-4 text-sm font-bold uppercase tracking-wider text-white">Our Services</h4>
-            <ul className="space-y-2.5">
-              {services.map((service) => (
-                <li key={service.href}>
-                  <Link href={service.href} className="inline-block text-sm text-primary-foreground/80 transition-colors hover:translate-x-1 hover:text-accent">
-                    {service.title}
-                  </Link>
-                </li>
-              ))}
-              <li>
-                <Link href="/services" className="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline">
-                  View All Services →
-                </Link>
-              </li>
-            </ul>
+            <div className="grid grid-cols-2 gap-x-6">
+              <ul className="space-y-2.5">
+                {services.slice(0, 8).map((service) => (
+                  <li key={service.href}>
+                    <Link href={service.href} className="inline-block text-sm text-primary-foreground/80 transition-colors hover:translate-x-1 hover:text-accent">
+                      {service.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <ul className="space-y-2.5">
+                {services.slice(8, 16).map((service) => (
+                  <li key={service.href}>
+                    <Link href={service.href} className="inline-block text-sm text-primary-foreground/80 transition-colors hover:translate-x-1 hover:text-accent">
+                      {service.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <Link href="/services" className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline">
+              View All Services →
+            </Link>
           </div>
 
           {/* Contact Info */}
-          <div>
+          <div className="lg:col-span-1">
             <h4 className="mb-4 text-sm font-bold uppercase tracking-wider text-white">Contact Us</h4>
             <ul className="space-y-3">
               <li>

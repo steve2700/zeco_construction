@@ -10,7 +10,7 @@ export function CTASection() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/placeholder.svg?height=800&width=1600"
+          src="/professional-construction-workers-team.jpg"
           alt="ZECO Construction - Ready to start your project"
           fill
           className="object-cover opacity-10"
