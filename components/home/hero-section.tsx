@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Phone, CheckCircle, Shield, Award, Star, Zap, Clock, Users } from "lucide-react"
+import { Phone, CheckCircle, Shield, Award, Star, Zap, Clock, Users, Images } from "lucide-react"
 import { WhatsAppIcon } from "@/components/icons/whatsapp-icon"
 
 export function HeroSection() {
@@ -111,11 +111,11 @@ export function HeroSection() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-white/40 bg-white/5 text-white hover:bg-white/15 backdrop-blur-sm h-11 lg:h-12 px-6 lg:px-8 text-sm lg:text-base font-semibold transition-all hover:scale-105"
+                className="group border-white/40 bg-white/5 text-white hover:bg-white/15 backdrop-blur-sm h-11 lg:h-12 px-6 lg:px-8 text-sm lg:text-base font-semibold transition-all hover:scale-105"
               >
-                <Link href="/services">
-                  Explore Our Services
-                  <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
+                <Link href="/gallery">
+                  <Images className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" aria-hidden="true" />
+                  See Our Recent Work
                 </Link>
               </Button>
             </div>
