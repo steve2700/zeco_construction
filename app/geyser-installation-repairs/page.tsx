@@ -34,7 +34,7 @@ export const metadata: Metadata = {
       "Electric, solar and Kwikot geyser installation and repairs across Gauteng. Same-day quotes, licensed installers, full compliance certification.",
     images: [
       {
-        url: "/geyser-installation.jfif",
+        url: "/geyser-installation.jpg",
         width: 1200,
         height: 630,
         alt: "Geyser installation by ZECO Construction in Gauteng",
@@ -46,19 +46,19 @@ export const metadata: Metadata = {
 const jobs = [
   {
     title: "Electric geyser installation",
-    image: "/geyser-installation.jfif",
+    image: "/geyser-installation.jpg",
     alt: "Electric geyser being installed in a Gauteng home",
     copy: "50L to 400L units, correctly sized for your household so you're not paying to heat water you never use.",
   },
   {
     title: "Kwikot installation & servicing",
-    image: "/kwikot_geyser_installation.jfif",
+    image: "/kwikot_geyser_installation.jpg",
     alt: "Kwikot geyser installed in a Gauteng roof space",
     copy: "Certified Kwikot installers. Full manufacturer warranty support, whether it's a new unit or a service on an existing one.",
   },
   {
     title: "Solar geyser installation",
-    image: "/solar_geyser_installation_pretoria.jfif",
+    image: "/solar_geyser_installation_pretoria.jpg",
     alt: "Solar geyser panels installed on a roof in Pretoria",
     copy: "Panels sized to your household with an electric backup element, so hot water keeps running through load shedding and cloudy weeks.",
   },
@@ -70,7 +70,7 @@ const jobs = [
   },
   {
     title: "Insurance geyser replacements",
-    image: "/burst_pipe_centurion.jfif",
+    image: "/burst_pipe_centurion.jpg",
     alt: "Insurance geyser replacement handled by ZECO Construction",
     copy: "Assessment report, photos and COC supplied so your claim closes without you chasing paperwork.",
   },
@@ -128,7 +128,7 @@ export default function GeyserInstallationPage() {
       {/* HERO */}
       <section className="relative isolate overflow-hidden">
         <Image
-          src="/geyser-installation.jfif"
+          src="/geyser-installation.jpg"
           alt="ZECO Construction geyser installation in Gauteng"
           fill
           priority
@@ -308,7 +308,7 @@ export default function GeyserInstallationPage() {
 
           <div className="relative min-h-[320px] overflow-hidden rounded-2xl">
             <Image
-              src="/solar_geyser_installation_pretoria.jfif"
+              src="/solar_geyser_installation_pretoria.jpg"
               alt="Solar geyser installation completed by ZECO Construction in Pretoria"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
@@ -394,7 +394,7 @@ export default function GeyserInstallationPage() {
             name: "ZECO Construction Geyser Installation & Repairs",
             url: "https://www.zecoconstruction.co.za/geyser-installation-repairs",
             telephone: "+27-74-850-9727",
-            image: "https://www.zecoconstruction.co.za/geyser-installation.jfif",
+            image: "https://www.zecoconstruction.co.za/geyser-installation.jpg",
             priceRange: "$$",
             address: {
               "@type": "PostalAddress",

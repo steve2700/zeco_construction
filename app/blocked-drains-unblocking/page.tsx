@@ -32,7 +32,7 @@ export const metadata: Metadata = {
       "Fast, effective blocked drain unblocking across Gauteng. High-pressure jetting, CCTV inspection, and same-day service in Pretoria & Johannesburg.",
     images: [
       {
-        url: "/blocked_drains.jfif",
+        url: "/blocked_drains.jpg",
         width: 1200,
         height: 630,
         alt: "Blocked drain unblocking service in Gauteng - ZECO Construction",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 const jobs = [
   {
     title: "Kitchen sink unblocking",
-    image: "/blocked_drains.jfif",
+    image: "/blocked_drains.jpg",
     alt: "Plumber unblocking a kitchen sink drain",
     copy: "Grease and food debris are the most common cause. Jetted clear so it doesn't slow to a crawl again in a fortnight.",
   },
@@ -56,7 +56,7 @@ const jobs = [
   },
   {
     title: "Blocked toilets",
-    image: "/blocked_drains_pretoria.jfif",
+    image: "/blocked_drains_pretoria.jpg",
     alt: "Plumber clearing a blocked toilet drain in Pretoria",
     copy: "Foreign objects and paper buildup cleared fast, with a camera check if it's blocking repeatedly.",
   },
@@ -68,13 +68,13 @@ const jobs = [
   },
   {
     title: "Stormwater drain clearing",
-    image: "/burst_pipe_centurion.jfif",
+    image: "/burst_pipe_centurion.jpg",
     alt: "Plumber clearing a stormwater drain of leaves and debris",
     copy: "Leaves and debris jetted out so water actually drains away next time it rains, not around your property.",
   },
   {
     title: "CCTV drain inspection",
-    image: "/emergency_plumber_Gauteng.jfif",
+    image: "/emergency_plumber_Gauteng.jpg",
     alt: "Plumber running a CCTV camera inspection through a drain",
     copy: "We see exactly what's causing a repeat blockage before we dig or quote for anything.",
   },
@@ -122,7 +122,7 @@ export default function BlockedDrainsPage() {
       {/* HERO */}
       <section className="relative isolate overflow-hidden">
         <Image
-          src="/blocked_drains.jfif"
+          src="/blocked_drains.jpg"
           alt="ZECO Construction clearing a blocked drain in Gauteng"
           fill
           priority
@@ -302,7 +302,7 @@ export default function BlockedDrainsPage() {
 
           <div className="relative min-h-[320px] overflow-hidden rounded-2xl">
             <Image
-              src="/blocked_drains_pretoria.jfif"
+              src="/blocked_drains_pretoria.jpg"
               alt="ZECO Construction clearing a blocked drain in Pretoria"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
@@ -388,7 +388,7 @@ export default function BlockedDrainsPage() {
             name: "ZECO Construction Blocked Drains",
             url: "https://www.zecoconstruction.co.za/blocked-drains-unblocking",
             telephone: "+27-74-850-9727",
-            image: "https://www.zecoconstruction.co.za/blocked_drains.jfif",
+            image: "https://www.zecoconstruction.co.za/blocked_drains.jpg",
             priceRange: "$$",
             address: {
               "@type": "PostalAddress",

@@ -36,25 +36,25 @@ export const metadata: Metadata = {
 const jobs = [
   {
     title: "Burst pipes",
-    image: "/burst_pipe_centurion.jfif",
+    image: "/burst_pipe_centurion.jpg",
     alt: "Plumber repairing a burst water pipe at a home in Centurion",
     copy: "Water shut off, pipe cut out and replaced the same visit. We patch and pressure test before we leave.",
   },
   {
     title: "Blocked drains",
-    image: "/blocked_drains.jfif",
+    image: "/blocked_drains.jpg",
     alt: "High pressure jetting machine clearing a blocked drain",
     copy: "High pressure jetting and CCTV camera inspection so you know what caused the blockage, not just that it cleared.",
   },
   {
     title: "Geyser installation",
-    image: "/kwikot_geyser_installation.jfif",
+    image: "/kwikot_geyser_installation.jpg",
     alt: "New Kwikot geyser installed in a Gauteng roof space",
     copy: "Kwikot and Heat Tech geysers supplied, installed and certified. Insurance replacements handled start to finish.",
   },
   {
     title: "Solar geysers",
-    image: "/solar_geyser_installation_pretoria.jfif",
+    image: "/solar_geyser_installation_pretoria.jpg",
     alt: "Solar geyser panels installed on a roof in Pretoria",
     copy: "Apollo and flat plate solar systems sized to your household, wired with a backup element for cloudy weeks.",
   },
@@ -66,7 +66,7 @@ const jobs = [
   },
   {
     title: "Emergency callouts",
-    image: "/emergency_plumber_Gauteng.jfif",
+    image: "/emergency_plumber_Gauteng.jpg",
     alt: "ZECO emergency plumber arriving at a callout in Gauteng",
     copy: "After hours, weekends and public holidays. A plumber answers the phone, not a call centre.",
   },

@@ -47,19 +47,19 @@ export const metadata: Metadata = {
 const emergencies = [
   {
     title: "Burst pipes",
-    image: "/burst_pipe_centurion.jfif",
+    image: "/burst_pipe_centurion.jpg",
     alt: "Plumber repairing a burst water pipe at a home in Centurion",
     copy: "Water shut off on arrival, pipe cut out and replaced the same visit, pressure tested before we go.",
   },
   {
     title: "Geyser bursts",
-    image: "/kwikot_geyser_installation.jfif",
+    image: "/kwikot_geyser_installation.jpg",
     alt: "Replacement Kwikot geyser installed after a burst geyser emergency",
     copy: "Ceiling flooding from a burst geyser is the most common after-hours call we get. Power isolated, geyser replaced, insurance report supplied.",
   },
   {
     title: "Blocked sewer backing up",
-    image: "/blocked_drains.jfif",
+    image: "/blocked_drains.jpg",
     alt: "High pressure jetting machine clearing a blocked sewer line",
     copy: "Sewage backing up into a house or yard doesn't wait for Monday. Jetted clear and camera-checked so it doesn't come straight back.",
   },
@@ -77,7 +77,7 @@ const emergencies = [
   },
   {
     title: "Active flood damage",
-    image: "/emergency_plumber_Gauteng.jfif",
+    image: "/emergency_plumber_Gauteng.jpg",
     alt: "ZECO emergency plumber arriving to control flood damage",
     copy: "First job on arrival is always stopping the water. Permanent repairs and drying-out advice come after the damage is contained.",
   },
@@ -351,7 +351,7 @@ export default function EmergencyPlumberPage() {
 
           <div className="relative min-h-[320px] overflow-hidden rounded-2xl">
             <Image
-              src="/emergency_plumber_Gauteng.jfif"
+              src="/emergency_plumber_Gauteng.jpg"
               alt="ZECO Construction emergency plumber on site controlling a flood in Gauteng"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
